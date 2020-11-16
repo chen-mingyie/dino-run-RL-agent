@@ -8,3 +8,5 @@ LICENSE
 makefile
 README.md
 .idea
+rl_trainers/Logs/
+rl_trainers/debug.log

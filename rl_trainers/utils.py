@@ -3,7 +3,7 @@ import numpy as np
 from stable_baselines.common.callbacks import BaseCallback
 from stable_baselines.results_plotter import load_results, ts2xy
 
-def evaluate_model(model, num_steps=1000):
+def evaluate_model(env, model, num_steps=1000):
     """
     Evaluate a RL agent
     :param model: (BaseRLModel object) the RL Agent

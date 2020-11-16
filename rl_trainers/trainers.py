@@ -1,15 +1,12 @@
 import gym
 import os
 import gym_chrome_dino
-from stable_baselines import DQN
-from stable_baselines import ACKTR
 from gym_chrome_dino.utils.wrappers import make_dino
 from stable_baselines.bench import Monitor
 from stable_baselines.common import make_vec_env
-from stable_baselines.common.vec_env import SubprocVecEnv
+from stable_baselines.common.vec_env import SubprocVecEnv, DummyVecEnv
 from stable_baselines.common import set_global_seeds, make_vec_env
-from stable_baselines import TRPO
-from stable_baselines import PPO1
+from stable_baselines import TRPO, HER, PPO1, PPO2, DQN, ACKTR, A2C
 from rl_trainers.utils import save_model_callback
 from rl_trainers.utils import evaluate_model
 
@@ -22,8 +19,8 @@ def dqn(pretrained_model_name: str = ""):
 
     # Create env
     env = gym.make(ENV_ID)
-    env = make_dino(env, timer=True, frame_stack=True)
     env = Monitor(env, logpath)
+    env = make_dino(env, timer=True, frame_stack=True)
 
     # Train DQN
     if len(pretrained_model_name) == 0:
@@ -33,7 +30,7 @@ def dqn(pretrained_model_name: str = ""):
         model.env = env
     callback = save_model_callback(check_freq=1000, log_dir=logpath)
     model.learn(total_timesteps=25000, log_interval=10, callback=callback) # Train the agent
-    evaluate_model(model)
+    evaluate_model(env, model)
 
 def trpo(pretrained_model_name: str = ""):
     logpath = os.path.join(LOG_DIR, 'trpo')
@@ -44,7 +41,6 @@ def trpo(pretrained_model_name: str = ""):
     env = Monitor(env, logpath)
 
     # Train model from scratch
-
     if len(pretrained_model_name) == 0:
         model = TRPO('CnnPolicy', env, verbose=1)
     else:
@@ -52,7 +48,7 @@ def trpo(pretrained_model_name: str = ""):
         model.env = env
     callback = save_model_callback(check_freq=1000, log_dir=logpath)
     model.learn(total_timesteps=25000, log_interval=10, callback=callback) # Train the agent
-    evaluate_model(model)
+    evaluate_model(env, model)
 
 def ppo1(pretrained_model_name: str = ""):
     logpath = os.path.join(LOG_DIR, 'ppo1')
@@ -70,4 +66,72 @@ def ppo1(pretrained_model_name: str = ""):
         model.env = env
     callback = save_model_callback(check_freq=1000, log_dir=logpath)
     model.learn(total_timesteps=25000, log_interval=10, callback=callback) # Train the agent
-    evaluate_model(model)
+    evaluate_model(env, model)
+
+def ppo2(pretrained_model_name: str = ""):
+    logpath = os.path.join(LOG_DIR, 'ppo2')
+
+    # Create Env
+    env = make_vec_env(ENV_ID, n_envs=2, monitor_dir=logpath, wrapper_class=make_dino)
+
+    # Train model from scratch
+    if len(pretrained_model_name) == 0:
+        model = PPO2('CnnPolicy', env, verbose=1)
+    else:
+        model = PPO2.load(os.path.join(logpath, pretrained_model_name))
+        model.env = env
+    callback = save_model_callback(check_freq=1000, log_dir=logpath)
+    model.learn(total_timesteps=100000, log_interval=50, callback=callback) # Train the agent
+    # evaluate_model(env, model)
+
+def a2c(pretrained_model_name: str = ""):
+    logpath = os.path.join(LOG_DIR, 'a2c')
+
+    # Create Env
+    env = make_vec_env(ENV_ID, n_envs=2, monitor_dir=logpath, wrapper_class=make_dino)
+
+    # Train model from scratch
+    if len(pretrained_model_name) == 0:
+        model = A2C('CnnPolicy', env, verbose=1)
+    else:
+        model = A2C.load(os.path.join(logpath, pretrained_model_name))
+        model.env = env
+    callback = save_model_callback(check_freq=1000, log_dir=logpath)
+    model.learn(total_timesteps=100000, log_interval=50, callback=callback) # Train the agent
+    # evaluate_model(env, model)
+
+def acktr_notworking(pretrained_model_name: str = ""):
+    logpath = os.path.join(LOG_DIR, 'acktr')
+
+    # Create Env
+    env = make_vec_env(ENV_ID, n_envs=2, monitor_dir=logpath, wrapper_class=make_dino)
+
+    # Train model from scratch
+    if len(pretrained_model_name) == 0:
+        model = ACKTR('CnnPolicy', env, verbose=1)
+    else:
+        model = ACKTR.load(os.path.join(logpath, pretrained_model_name))
+        model.env = env
+    callback = save_model_callback(check_freq=1000, log_dir=logpath)
+    model.learn(total_timesteps=100000, log_interval=50, callback=callback) # Train the agent
+    # evaluate_model(env, model)
+
+# def her(pretrained_model_name: str = ""):
+#     logpath = os.path.join(LOG_DIR, 'her')
+#
+#     # Create env
+#     env = gym.make(ENV_ID)
+#     env = make_dino(env, timer=True, frame_stack=True)
+#     env = Monitor(env, logpath)
+#
+#     # Train model from scratch
+#     model_class = DQN  # works also with SAC, DDPG and TD3
+#     goal_selection_strategy = 'future'  # equivalent to GoalSelectionStrategy.FUTURE. Available strategies (cf paper): future, final, episode, random
+#     if len(pretrained_model_name) == 0:
+#         model = HER('CnnPolicy', env, model_class, n_sampled_goal=4, goal_selection_strategy=goal_selection_strategy, verbose=1)
+#     else:
+#         model = HER.load(os.path.join(logpath, pretrained_model_name))
+#         model.env = env
+#     callback = save_model_callback(check_freq=1000, log_dir=logpath)
+#     model.learn(total_timesteps=25000, log_interval=10, callback=callback) # Train the agent
+#     evaluate_model(model)
