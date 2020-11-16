@@ -1,0 +1,9 @@
+*.egg-info
+build/
+dist/
+__pycache__/
+.ipynb_checkpoints/
+setup.py
+LICENSE
+makefile
+README.md
