@@ -48,5 +48,5 @@ def make_dino(env, timer=True, frame_stack=True):
     if timer:
         env = TimerEnv(env)
     if frame_stack:
-        env = FrameStack(env, 4)
+        env = FrameStack(env, 8)
     return env

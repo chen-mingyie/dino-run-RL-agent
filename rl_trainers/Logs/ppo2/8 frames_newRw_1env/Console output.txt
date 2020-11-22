@@ -1,0 +1,1713 @@
+C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2020.2.1\plugins\python-ce\helpers\pydev\pydevd.py" --multiproc --qt-support=auto --client 127.0.0.1 --port 58474 --file C:/Users/chen_/PycharmProjects/dino-run_RL-agent/rl_trainers/start_training.py
+pydev debugger: process 13084 is connecting
+
+Connected to pydev debugger (build 202.6948.78)
+2020-11-19 13:44:19.373062: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cudart64_100.dll'; dlerror: cudart64_100.dll not found
+2020-11-19 13:44:19.373424: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\tf_util.py:191: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\tf_util.py:200: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-11-19 13:44:26.437479: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2020-11-19 13:44:26.442339: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library nvcuda.dll
+2020-11-19 13:44:27.422539: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1650 major: 7 minor: 5 memoryClockRate(GHz): 1.515
+pciBusID: 0000:01:00.0
+2020-11-19 13:44:27.423589: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cudart64_100.dll'; dlerror: cudart64_100.dll not found
+2020-11-19 13:44:27.424462: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cublas64_100.dll'; dlerror: cublas64_100.dll not found
+2020-11-19 13:44:27.425315: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cufft64_100.dll'; dlerror: cufft64_100.dll not found
+2020-11-19 13:44:27.426281: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'curand64_100.dll'; dlerror: curand64_100.dll not found
+2020-11-19 13:44:27.427325: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cusolver64_100.dll'; dlerror: cusolver64_100.dll not found
+2020-11-19 13:44:27.428189: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cusparse64_100.dll'; dlerror: cusparse64_100.dll not found
+2020-11-19 13:44:27.435199: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2020-11-19 13:44:27.435523: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1641] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2020-11-19 13:44:27.519043: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-19 13:44:27.519283: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-19 13:44:27.519425: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\policies.py:117: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\input.py:25: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\tf_layers.py:103: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\distributions.py:326: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\distributions.py:327: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\ppo2\ppo2.py:190: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\ppo2\ppo2.py:198: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\tensorflow_core\python\ops\math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\ppo2\ppo2.py:206: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\ppo2\ppo2.py:240: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\ppo2\ppo2.py:242: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+-------------------------------------
+| approxkl           | 0.08318892   |
+| clipfrac           | 0.33398438   |
+| explained_variance | -0.249       |
+| fps                | 24           |
+| n_updates          | 1            |
+| policy_entropy     | 0.5437518    |
+| policy_loss        | -0.043968357 |
+| serial_timesteps   | 128          |
+| time_elapsed       | 0            |
+| total_timesteps    | 128          |
+| value_loss         | 1.10996      |
+-------------------------------------
+Num timesteps: 1000
+Best mean reward: -inf - Last mean reward per episode: 11.03
+C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\numpy\core\fromnumeric.py:3373: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\numpy\core\_methods.py:170: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+Mean score over last 0.00 episodes: nan
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 2000
+Best mean reward: 11.03 - Last mean reward per episode: 7.66
+Mean score over last 1.00 episodes: 45.00
+Num timesteps: 3000
+Best mean reward: 11.03 - Last mean reward per episode: 9.26
+Mean score over last 1.00 episodes: 45.00
+Num timesteps: 4000
+Best mean reward: 11.03 - Last mean reward per episode: 9.28
+Mean score over last 1.00 episodes: 45.00
+Num timesteps: 5000
+Best mean reward: 11.03 - Last mean reward per episode: 9.53
+Mean score over last 1.00 episodes: 45.00
+Num timesteps: 6000
+Best mean reward: 11.03 - Last mean reward per episode: 9.15
+Mean score over last 4.00 episodes: 44.75
+---------------------------------------
+| approxkl           | 1.1691727e-07  |
+| clipfrac           | 0.0            |
+| ep_len_mean        | 162            |
+| ep_reward_mean     | 9.15           |
+| explained_variance | 0.0817         |
+| fps                | 35             |
+| n_updates          | 50             |
+| policy_entropy     | 0.0106462985   |
+| policy_loss        | -2.3671775e-05 |
+| serial_timesteps   | 6400           |
+| time_elapsed       | 225            |
+| total_timesteps    | 6400           |
+| value_loss         | 0.005220053    |
+---------------------------------------
+Num timesteps: 7000
+Best mean reward: 11.03 - Last mean reward per episode: 10.22
+Mean score over last 5.00 episodes: 44.60
+Backend TkAgg is interactive backend. Turning interactive mode on.
+Num timesteps: 8000
+Best mean reward: 11.03 - Last mean reward per episode: 10.06
+Mean score over last 6.00 episodes: 44.67
+Num timesteps: 9000
+Best mean reward: 11.03 - Last mean reward per episode: 10.11
+Mean score over last 9.00 episodes: 46.67
+Num timesteps: 10000
+Best mean reward: 11.03 - Last mean reward per episode: 10.00
+Mean score over last 9.00 episodes: 46.67
+Num timesteps: 11000
+Best mean reward: 11.03 - Last mean reward per episode: 10.35
+Mean score over last 10.00 episodes: 47.60
+Num timesteps: 12000
+Best mean reward: 11.03 - Last mean reward per episode: 9.89
+Mean score over last 11.00 episodes: 47.36
+-------------------------------------
+| approxkl           | 0.14051291   |
+| clipfrac           | 0.25195312   |
+| ep_len_mean        | 179          |
+| ep_reward_mean     | 10.6         |
+| explained_variance | 0.855        |
+| fps                | 26           |
+| n_updates          | 100          |
+| policy_entropy     | 0.3740315    |
+| policy_loss        | -0.045669697 |
+| serial_timesteps   | 12800        |
+| time_elapsed       | 483          |
+| total_timesteps    | 12800        |
+| value_loss         | 0.073366985  |
+-------------------------------------
+Num timesteps: 13000
+Best mean reward: 11.03 - Last mean reward per episode: 10.56
+Mean score over last 11.00 episodes: 47.36
+Num timesteps: 14000
+Best mean reward: 11.03 - Last mean reward per episode: 10.61
+Mean score over last 12.00 episodes: 47.17
+Num timesteps: 15000
+Best mean reward: 11.03 - Last mean reward per episode: 10.62
+Mean score over last 13.00 episodes: 47.08
+Num timesteps: 16000
+Best mean reward: 11.03 - Last mean reward per episode: 10.59
+Mean score over last 13.00 episodes: 47.08
+Num timesteps: 17000
+Best mean reward: 11.03 - Last mean reward per episode: 10.88
+Mean score over last 16.00 episodes: 46.75
+Num timesteps: 18000
+Best mean reward: 11.03 - Last mean reward per episode: 10.78
+Mean score over last 17.00 episodes: 46.59
+Num timesteps: 19000
+Best mean reward: 11.03 - Last mean reward per episode: 10.91
+Mean score over last 17.00 episodes: 46.59
+------------------------------------
+| approxkl           | 0.103493124 |
+| clipfrac           | 0.17382812  |
+| ep_len_mean        | 179         |
+| ep_reward_mean     | 11.1        |
+| explained_variance | 0.79        |
+| fps                | 29          |
+| n_updates          | 150         |
+| policy_entropy     | 0.27560347  |
+| policy_loss        | -0.03819181 |
+| serial_timesteps   | 19200       |
+| time_elapsed       | 713         |
+| total_timesteps    | 19200       |
+| value_loss         | 0.08461957  |
+------------------------------------
+Num timesteps: 20000
+Best mean reward: 11.03 - Last mean reward per episode: 10.89
+Mean score over last 17.00 episodes: 46.59
+Num timesteps: 21000
+Best mean reward: 11.03 - Last mean reward per episode: 10.91
+Mean score over last 17.00 episodes: 46.59
+Num timesteps: 22000
+Best mean reward: 11.03 - Last mean reward per episode: 11.25
+Mean score over last 17.00 episodes: 46.59
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 23000
+Best mean reward: 11.25 - Last mean reward per episode: 10.95
+Mean score over last 18.00 episodes: 47.00
+Num timesteps: 24000
+Best mean reward: 11.25 - Last mean reward per episode: 11.43
+Mean score over last 19.00 episodes: 47.42
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 25000
+Best mean reward: 11.43 - Last mean reward per episode: 11.12
+Mean score over last 19.00 episodes: 47.42
+------------------------------------
+| approxkl           | 0.07212799  |
+| clipfrac           | 0.24023438  |
+| ep_len_mean        | 182         |
+| ep_reward_mean     | 11.4        |
+| explained_variance | 0.834       |
+| fps                | 25          |
+| n_updates          | 200         |
+| policy_entropy     | 0.32008493  |
+| policy_loss        | -0.04046308 |
+| serial_timesteps   | 25600       |
+| time_elapsed       | 942         |
+| total_timesteps    | 25600       |
+| value_loss         | 0.07701419  |
+------------------------------------
+Num timesteps: 26000
+Best mean reward: 11.43 - Last mean reward per episode: 11.21
+Mean score over last 22.00 episodes: 48.91
+Num timesteps: 27000
+Best mean reward: 11.43 - Last mean reward per episode: 11.01
+Mean score over last 22.00 episodes: 48.91
+Num timesteps: 28000
+Best mean reward: 11.43 - Last mean reward per episode: 10.92
+Mean score over last 22.00 episodes: 48.91
+Num timesteps: 29000
+Best mean reward: 11.43 - Last mean reward per episode: 10.63
+Mean score over last 23.00 episodes: 48.78
+Num timesteps: 30000
+Best mean reward: 11.43 - Last mean reward per episode: 10.69
+Mean score over last 25.00 episodes: 49.16
+Num timesteps: 31000
+Best mean reward: 11.43 - Last mean reward per episode: 10.87
+Mean score over last 25.00 episodes: 49.16
+Num timesteps: 32000
+Best mean reward: 11.43 - Last mean reward per episode: 10.71
+Mean score over last 27.00 episodes: 49.26
+-------------------------------------
+| approxkl           | 0.1654166    |
+| clipfrac           | 0.18554688   |
+| ep_len_mean        | 176          |
+| ep_reward_mean     | 10.7         |
+| explained_variance | 0.858        |
+| fps                | 28           |
+| n_updates          | 250          |
+| policy_entropy     | 0.25342363   |
+| policy_loss        | -0.030718084 |
+| serial_timesteps   | 32000        |
+| time_elapsed       | 1.18e+03     |
+| total_timesteps    | 32000        |
+| value_loss         | 0.04763839   |
+-------------------------------------
+Num timesteps: 33000
+Best mean reward: 11.43 - Last mean reward per episode: 10.92
+Mean score over last 27.00 episodes: 49.26
+Num timesteps: 34000
+Best mean reward: 11.43 - Last mean reward per episode: 11.07
+Mean score over last 27.00 episodes: 49.26
+Num timesteps: 35000
+Best mean reward: 11.43 - Last mean reward per episode: 11.22
+Mean score over last 28.00 episodes: 49.11
+Num timesteps: 36000
+Best mean reward: 11.43 - Last mean reward per episode: 11.35
+Mean score over last 28.00 episodes: 49.11
+Num timesteps: 37000
+Best mean reward: 11.43 - Last mean reward per episode: 11.25
+Mean score over last 28.00 episodes: 49.11
+Num timesteps: 38000
+Best mean reward: 11.43 - Last mean reward per episode: 11.54
+Mean score over last 28.00 episodes: 49.11
+Saving new best model to Logs\ppo2\best_model
+-------------------------------------
+| approxkl           | 0.070125945  |
+| clipfrac           | 0.20703125   |
+| ep_len_mean        | 180          |
+| ep_reward_mean     | 11.6         |
+| explained_variance | 0.976        |
+| fps                | 27           |
+| n_updates          | 300          |
+| policy_entropy     | 0.3431272    |
+| policy_loss        | -0.043727793 |
+| serial_timesteps   | 38400        |
+| time_elapsed       | 1.4e+03      |
+| total_timesteps    | 38400        |
+| value_loss         | 0.018077785  |
+-------------------------------------
+Num timesteps: 39000
+Best mean reward: 11.54 - Last mean reward per episode: 11.48
+Mean score over last 30.00 episodes: 48.80
+Num timesteps: 40000
+Best mean reward: 11.54 - Last mean reward per episode: 11.43
+Mean score over last 32.00 episodes: 48.56
+Num timesteps: 41000
+Best mean reward: 11.54 - Last mean reward per episode: 12.06
+Mean score over last 34.00 episodes: 49.74
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 42000
+Best mean reward: 12.06 - Last mean reward per episode: 11.52
+Mean score over last 35.00 episodes: 49.60
+Num timesteps: 43000
+Best mean reward: 12.06 - Last mean reward per episode: 11.52
+Mean score over last 35.00 episodes: 49.60
+Num timesteps: 44000
+Best mean reward: 12.06 - Last mean reward per episode: 11.47
+Mean score over last 35.00 episodes: 49.60
+------------------------------------
+| approxkl           | 0.059688482 |
+| clipfrac           | 0.1875      |
+| ep_len_mean        | 181         |
+| ep_reward_mean     | 11.4        |
+| explained_variance | 0.914       |
+| fps                | 27          |
+| n_updates          | 350         |
+| policy_entropy     | 0.3493275   |
+| policy_loss        | -0.04809266 |
+| serial_timesteps   | 44800       |
+| time_elapsed       | 1.63e+03    |
+| total_timesteps    | 44800       |
+| value_loss         | 0.05862396  |
+------------------------------------
+Num timesteps: 45000
+Best mean reward: 12.06 - Last mean reward per episode: 11.40
+Mean score over last 35.00 episodes: 49.60
+Num timesteps: 46000
+Best mean reward: 12.06 - Last mean reward per episode: 11.75
+Mean score over last 35.00 episodes: 49.60
+Num timesteps: 47000
+Best mean reward: 12.06 - Last mean reward per episode: 12.08
+Mean score over last 37.00 episodes: 49.68
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 48000
+Best mean reward: 12.08 - Last mean reward per episode: 12.24
+Mean score over last 38.00 episodes: 49.55
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 49000
+Best mean reward: 12.24 - Last mean reward per episode: 12.07
+Mean score over last 39.00 episodes: 49.72
+Num timesteps: 50000
+Best mean reward: 12.24 - Last mean reward per episode: 12.21
+Mean score over last 40.00 episodes: 49.62
+Num timesteps: 51000
+Best mean reward: 12.24 - Last mean reward per episode: 12.03
+Mean score over last 40.00 episodes: 49.62
+------------------------------------
+| approxkl           | 0.058915675 |
+| clipfrac           | 0.16210938  |
+| ep_len_mean        | 181         |
+| ep_reward_mean     | 12          |
+| explained_variance | 0.51        |
+| fps                | 28          |
+| n_updates          | 400         |
+| policy_entropy     | 0.26681185  |
+| policy_loss        | -0.02020486 |
+| serial_timesteps   | 51200       |
+| time_elapsed       | 1.86e+03    |
+| total_timesteps    | 51200       |
+| value_loss         | 0.14554852  |
+------------------------------------
+Num timesteps: 52000
+Best mean reward: 12.24 - Last mean reward per episode: 11.81
+Mean score over last 41.00 episodes: 49.51
+Num timesteps: 53000
+Best mean reward: 12.24 - Last mean reward per episode: 11.69
+Mean score over last 41.00 episodes: 49.51
+Num timesteps: 54000
+Best mean reward: 12.24 - Last mean reward per episode: 11.83
+Mean score over last 42.00 episodes: 49.81
+Num timesteps: 55000
+Best mean reward: 12.24 - Last mean reward per episode: 11.96
+Mean score over last 42.00 episodes: 49.81
+Num timesteps: 56000
+Best mean reward: 12.24 - Last mean reward per episode: 11.68
+Mean score over last 42.00 episodes: 49.81
+Num timesteps: 57000
+Best mean reward: 12.24 - Last mean reward per episode: 11.61
+Mean score over last 43.00 episodes: 49.70
+-------------------------------------
+| approxkl           | 0.07085578   |
+| clipfrac           | 0.16601562   |
+| ep_len_mean        | 182          |
+| ep_reward_mean     | 11.7         |
+| explained_variance | 0.963        |
+| fps                | 29           |
+| n_updates          | 450          |
+| policy_entropy     | 0.30832335   |
+| policy_loss        | -0.044300698 |
+| serial_timesteps   | 57600        |
+| time_elapsed       | 2.09e+03     |
+| total_timesteps    | 57600        |
+| value_loss         | 0.0059298268 |
+-------------------------------------
+Num timesteps: 58000
+Best mean reward: 12.24 - Last mean reward per episode: 11.83
+Mean score over last 43.00 episodes: 49.70
+Num timesteps: 59000
+Best mean reward: 12.24 - Last mean reward per episode: 11.77
+Mean score over last 46.00 episodes: 49.80
+Num timesteps: 60000
+Best mean reward: 12.24 - Last mean reward per episode: 11.91
+Mean score over last 46.00 episodes: 49.80
+Num timesteps: 61000
+Best mean reward: 12.24 - Last mean reward per episode: 12.00
+Mean score over last 47.00 episodes: 49.72
+Num timesteps: 62000
+Best mean reward: 12.24 - Last mean reward per episode: 11.99
+Mean score over last 48.00 episodes: 50.17
+Num timesteps: 63000
+Best mean reward: 12.24 - Last mean reward per episode: 12.32
+Mean score over last 49.00 episodes: 50.29
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 64000
+Best mean reward: 12.32 - Last mean reward per episode: 12.72
+Mean score over last 50.00 episodes: 50.22
+Saving new best model to Logs\ppo2\best_model
+-------------------------------------
+| approxkl           | 0.062219925  |
+| clipfrac           | 0.203125     |
+| ep_len_mean        | 185          |
+| ep_reward_mean     | 12.7         |
+| explained_variance | 0.865        |
+| fps                | 27           |
+| n_updates          | 500          |
+| policy_entropy     | 0.28273484   |
+| policy_loss        | -0.043084435 |
+| serial_timesteps   | 64000        |
+| time_elapsed       | 2.32e+03     |
+| total_timesteps    | 64000        |
+| value_loss         | 0.0679493    |
+-------------------------------------
+Num timesteps: 65000
+Best mean reward: 12.72 - Last mean reward per episode: 12.82
+Mean score over last 50.00 episodes: 50.22
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 66000
+Best mean reward: 12.82 - Last mean reward per episode: 12.84
+Mean score over last 53.00 episodes: 50.21
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 67000
+Best mean reward: 12.84 - Last mean reward per episode: 12.52
+Mean score over last 53.00 episodes: 50.21
+Num timesteps: 68000
+Best mean reward: 12.84 - Last mean reward per episode: 12.52
+Mean score over last 53.00 episodes: 50.21
+Num timesteps: 69000
+Best mean reward: 12.84 - Last mean reward per episode: 12.48
+Mean score over last 54.00 episodes: 50.11
+Num timesteps: 70000
+Best mean reward: 12.84 - Last mean reward per episode: 12.62
+Mean score over last 57.00 episodes: 49.86
+-------------------------------------
+| approxkl           | 0.17591551   |
+| clipfrac           | 0.18359375   |
+| ep_len_mean        | 178          |
+| ep_reward_mean     | 12.4         |
+| explained_variance | 0.625        |
+| fps                | 27           |
+| n_updates          | 550          |
+| policy_entropy     | 0.2596876    |
+| policy_loss        | -0.033631593 |
+| serial_timesteps   | 70400        |
+| time_elapsed       | 2.55e+03     |
+| total_timesteps    | 70400        |
+| value_loss         | 0.11278885   |
+-------------------------------------
+Num timesteps: 71000
+Best mean reward: 12.84 - Last mean reward per episode: 12.36
+Mean score over last 59.00 episodes: 49.69
+Num timesteps: 72000
+Best mean reward: 12.84 - Last mean reward per episode: 11.34
+Mean score over last 60.00 episodes: 49.77
+Num timesteps: 73000
+Best mean reward: 12.84 - Last mean reward per episode: 11.23
+Mean score over last 60.00 episodes: 49.77
+Num timesteps: 74000
+Best mean reward: 12.84 - Last mean reward per episode: 11.28
+Mean score over last 62.00 episodes: 49.63
+Num timesteps: 75000
+Best mean reward: 12.84 - Last mean reward per episode: 11.02
+Mean score over last 63.00 episodes: 49.56
+Num timesteps: 76000
+Best mean reward: 12.84 - Last mean reward per episode: 10.78
+Mean score over last 64.00 episodes: 49.48
+-------------------------------------
+| approxkl           | 0.11259884   |
+| clipfrac           | 0.15625      |
+| ep_len_mean        | 168          |
+| ep_reward_mean     | 10.9         |
+| explained_variance | 0.531        |
+| fps                | 25           |
+| n_updates          | 600          |
+| policy_entropy     | 0.19923738   |
+| policy_loss        | -0.022255193 |
+| serial_timesteps   | 76800        |
+| time_elapsed       | 2.79e+03     |
+| total_timesteps    | 76800        |
+| value_loss         | 0.14472869   |
+-------------------------------------
+Num timesteps: 77000
+Best mean reward: 12.84 - Last mean reward per episode: 10.81
+Mean score over last 64.00 episodes: 49.48
+Num timesteps: 78000
+Best mean reward: 12.84 - Last mean reward per episode: 11.18
+Mean score over last 64.00 episodes: 49.48
+Num timesteps: 79000
+Best mean reward: 12.84 - Last mean reward per episode: 11.58
+Mean score over last 64.00 episodes: 49.48
+Num timesteps: 80000
+Best mean reward: 12.84 - Last mean reward per episode: 11.40
+Mean score over last 67.00 episodes: 49.33
+Num timesteps: 81000
+Best mean reward: 12.84 - Last mean reward per episode: 10.94
+Mean score over last 67.00 episodes: 49.33
+Num timesteps: 82000
+Best mean reward: 12.84 - Last mean reward per episode: 10.79
+Mean score over last 69.00 episodes: 49.22
+Num timesteps: 83000
+Best mean reward: 12.84 - Last mean reward per episode: 10.89
+Mean score over last 70.00 episodes: 49.16
+------------------------------------
+| approxkl           | 0.07924814  |
+| clipfrac           | 0.23828125  |
+| ep_len_mean        | 170         |
+| ep_reward_mean     | 11          |
+| explained_variance | 0.885       |
+| fps                | 28          |
+| n_updates          | 650         |
+| policy_entropy     | 0.42905337  |
+| policy_loss        | -0.05822251 |
+| serial_timesteps   | 83200       |
+| time_elapsed       | 3.02e+03    |
+| total_timesteps    | 83200       |
+| value_loss         | 0.054036167 |
+------------------------------------
+Num timesteps: 84000
+Best mean reward: 12.84 - Last mean reward per episode: 10.72
+Mean score over last 70.00 episodes: 49.16
+Num timesteps: 85000
+Best mean reward: 12.84 - Last mean reward per episode: 11.03
+Mean score over last 70.00 episodes: 49.16
+Num timesteps: 86000
+Best mean reward: 12.84 - Last mean reward per episode: 11.11
+Mean score over last 72.00 episodes: 49.04
+Num timesteps: 87000
+Best mean reward: 12.84 - Last mean reward per episode: 10.90
+Mean score over last 75.00 episodes: 48.88
+Num timesteps: 88000
+Best mean reward: 12.84 - Last mean reward per episode: 10.85
+Mean score over last 76.00 episodes: 48.82
+Num timesteps: 89000
+Best mean reward: 12.84 - Last mean reward per episode: 11.50
+Mean score over last 77.00 episodes: 48.77
+-------------------------------------
+| approxkl           | 0.14558387   |
+| clipfrac           | 0.1484375    |
+| ep_len_mean        | 175          |
+| ep_reward_mean     | 11.7         |
+| explained_variance | 0.609        |
+| fps                | 31           |
+| n_updates          | 700          |
+| policy_entropy     | 0.17698734   |
+| policy_loss        | -0.015506297 |
+| serial_timesteps   | 89600        |
+| time_elapsed       | 3.24e+03     |
+| total_timesteps    | 89600        |
+| value_loss         | 0.10026147   |
+-------------------------------------
+Num timesteps: 90000
+Best mean reward: 12.84 - Last mean reward per episode: 11.65
+Mean score over last 77.00 episodes: 48.77
+Num timesteps: 91000
+Best mean reward: 12.84 - Last mean reward per episode: 11.93
+Mean score over last 78.00 episodes: 48.73
+Num timesteps: 92000
+Best mean reward: 12.84 - Last mean reward per episode: 12.17
+Mean score over last 81.00 episodes: 48.74
+Num timesteps: 93000
+Best mean reward: 12.84 - Last mean reward per episode: 12.19
+Mean score over last 82.00 episodes: 48.70
+Num timesteps: 94000
+Best mean reward: 12.84 - Last mean reward per episode: 12.08
+Mean score over last 83.00 episodes: 48.64
+Num timesteps: 95000
+Best mean reward: 12.84 - Last mean reward per episode: 12.29
+Mean score over last 84.00 episodes: 48.58
+Num timesteps: 96000
+Best mean reward: 12.84 - Last mean reward per episode: 12.16
+Mean score over last 85.00 episodes: 48.54
+-------------------------------------
+| approxkl           | 0.08974478   |
+| clipfrac           | 0.24414062   |
+| ep_len_mean        | 174          |
+| ep_reward_mean     | 12.2         |
+| explained_variance | 0.961        |
+| fps                | 24           |
+| n_updates          | 750          |
+| policy_entropy     | 0.3379227    |
+| policy_loss        | -0.052891314 |
+| serial_timesteps   | 96000        |
+| time_elapsed       | 3.47e+03     |
+| total_timesteps    | 96000        |
+| value_loss         | 0.019852336  |
+-------------------------------------
+Num timesteps: 97000
+Best mean reward: 12.84 - Last mean reward per episode: 12.22
+Mean score over last 85.00 episodes: 48.54
+Num timesteps: 98000
+Best mean reward: 12.84 - Last mean reward per episode: 12.37
+Mean score over last 86.00 episodes: 48.59
+Num timesteps: 99000
+Best mean reward: 12.84 - Last mean reward per episode: 12.20
+Mean score over last 86.00 episodes: 48.59
+Num timesteps: 100000
+Best mean reward: 12.84 - Last mean reward per episode: 12.22
+Mean score over last 87.00 episodes: 48.55
+Num timesteps: 101000
+Best mean reward: 12.84 - Last mean reward per episode: 12.02
+Mean score over last 89.00 episodes: 48.80
+Num timesteps: 102000
+Best mean reward: 12.84 - Last mean reward per episode: 12.05
+Mean score over last 90.00 episodes: 48.86
+------------------------------------
+| approxkl           | 0.0727929   |
+| clipfrac           | 0.22460938  |
+| ep_len_mean        | 177         |
+| ep_reward_mean     | 12.1        |
+| explained_variance | 0.991       |
+| fps                | 29          |
+| n_updates          | 800         |
+| policy_entropy     | 0.33896497  |
+| policy_loss        | -0.04927691 |
+| serial_timesteps   | 102400      |
+| time_elapsed       | 3.7e+03     |
+| total_timesteps    | 102400      |
+| value_loss         | 0.008247194 |
+------------------------------------
+Num timesteps: 103000
+Best mean reward: 12.84 - Last mean reward per episode: 12.19
+Mean score over last 92.00 episodes: 49.07
+Num timesteps: 104000
+Best mean reward: 12.84 - Last mean reward per episode: 12.05
+Mean score over last 93.00 episodes: 49.12
+Num timesteps: 105000
+Best mean reward: 12.84 - Last mean reward per episode: 12.19
+Mean score over last 93.00 episodes: 49.12
+Num timesteps: 106000
+Best mean reward: 12.84 - Last mean reward per episode: 12.33
+Mean score over last 94.00 episodes: 49.07
+Num timesteps: 107000
+Best mean reward: 12.84 - Last mean reward per episode: 12.38
+Mean score over last 95.00 episodes: 49.03
+Num timesteps: 108000
+Best mean reward: 12.84 - Last mean reward per episode: 12.68
+Mean score over last 95.00 episodes: 49.03
+-------------------------------------
+| approxkl           | 0.08716658   |
+| clipfrac           | 0.15625      |
+| ep_len_mean        | 182          |
+| ep_reward_mean     | 12.1         |
+| explained_variance | 0.661        |
+| fps                | 24           |
+| n_updates          | 850          |
+| policy_entropy     | 0.18863177   |
+| policy_loss        | -0.024531635 |
+| serial_timesteps   | 108800       |
+| time_elapsed       | 3.94e+03     |
+| total_timesteps    | 108800       |
+| value_loss         | 0.11658175   |
+-------------------------------------
+Num timesteps: 109000
+Best mean reward: 12.84 - Last mean reward per episode: 12.14
+Mean score over last 95.00 episodes: 49.03
+Num timesteps: 110000
+Best mean reward: 12.84 - Last mean reward per episode: 11.97
+Mean score over last 95.00 episodes: 49.03
+Num timesteps: 111000
+Best mean reward: 12.84 - Last mean reward per episode: 11.82
+Mean score over last 96.00 episodes: 49.21
+Num timesteps: 112000
+Best mean reward: 12.84 - Last mean reward per episode: 11.79
+Mean score over last 96.00 episodes: 49.21
+Num timesteps: 113000
+Best mean reward: 12.84 - Last mean reward per episode: 11.60
+Mean score over last 98.00 episodes: 49.12
+Num timesteps: 114000
+Best mean reward: 12.84 - Last mean reward per episode: 11.32
+Mean score over last 100.00 episodes: 49.05
+Num timesteps: 115000
+Best mean reward: 12.84 - Last mean reward per episode: 11.36
+Mean score over last 102.00 episodes: 48.97
+-------------------------------------
+| approxkl           | 0.12539187   |
+| clipfrac           | 0.2109375    |
+| ep_len_mean        | 180          |
+| ep_reward_mean     | 11.4         |
+| explained_variance | 0.768        |
+| fps                | 26           |
+| n_updates          | 900          |
+| policy_entropy     | 0.36737284   |
+| policy_loss        | -0.044540003 |
+| serial_timesteps   | 115200       |
+| time_elapsed       | 4.17e+03     |
+| total_timesteps    | 115200       |
+| value_loss         | 0.04207832   |
+-------------------------------------
+Num timesteps: 116000
+Best mean reward: 12.84 - Last mean reward per episode: 11.54
+Mean score over last 103.00 episodes: 48.94
+Num timesteps: 117000
+Best mean reward: 12.84 - Last mean reward per episode: 11.46
+Mean score over last 104.00 episodes: 48.90
+Num timesteps: 118000
+Best mean reward: 12.84 - Last mean reward per episode: 11.51
+Mean score over last 106.00 episodes: 48.83
+Num timesteps: 119000
+Best mean reward: 12.84 - Last mean reward per episode: 11.55
+Mean score over last 107.00 episodes: 48.79
+Num timesteps: 120000
+Best mean reward: 12.84 - Last mean reward per episode: 11.56
+Mean score over last 108.00 episodes: 48.76
+Num timesteps: 121000
+Best mean reward: 12.84 - Last mean reward per episode: 11.07
+Mean score over last 109.00 episodes: 48.72
+------------------------------------
+| approxkl           | 0.18356584  |
+| clipfrac           | 0.22070312  |
+| ep_len_mean        | 179         |
+| ep_reward_mean     | 11.2        |
+| explained_variance | 0.616       |
+| fps                | 27          |
+| n_updates          | 950         |
+| policy_entropy     | 0.43191049  |
+| policy_loss        | -0.05986898 |
+| serial_timesteps   | 121600      |
+| time_elapsed       | 4.4e+03     |
+| total_timesteps    | 121600      |
+| value_loss         | 0.07685669  |
+------------------------------------
+Num timesteps: 122000
+Best mean reward: 12.84 - Last mean reward per episode: 11.10
+Mean score over last 111.00 episodes: 48.67
+Num timesteps: 123000
+Best mean reward: 12.84 - Last mean reward per episode: 11.05
+Mean score over last 111.00 episodes: 48.67
+Num timesteps: 124000
+Best mean reward: 12.84 - Last mean reward per episode: 11.40
+Mean score over last 112.00 episodes: 48.80
+Num timesteps: 125000
+Best mean reward: 12.84 - Last mean reward per episode: 11.57
+Mean score over last 113.00 episodes: 48.77
+Num timesteps: 126000
+Best mean reward: 12.84 - Last mean reward per episode: 11.40
+Mean score over last 114.00 episodes: 48.81
+Num timesteps: 127000
+Best mean reward: 12.84 - Last mean reward per episode: 11.74
+Mean score over last 114.00 episodes: 48.81
+Num timesteps: 128000
+Best mean reward: 12.84 - Last mean reward per episode: 12.17
+Mean score over last 114.00 episodes: 48.81
+-------------------------------------
+| approxkl           | 0.27189586   |
+| clipfrac           | 0.15039062   |
+| ep_len_mean        | 179          |
+| ep_reward_mean     | 12.2         |
+| explained_variance | 0.875        |
+| fps                | 27           |
+| n_updates          | 1000         |
+| policy_entropy     | 0.1153121    |
+| policy_loss        | -0.023204546 |
+| serial_timesteps   | 128000       |
+| time_elapsed       | 4.63e+03     |
+| total_timesteps    | 128000       |
+| value_loss         | 0.012319627  |
+-------------------------------------
+Num timesteps: 129000
+Best mean reward: 12.84 - Last mean reward per episode: 12.46
+Mean score over last 116.00 episodes: 48.81
+Num timesteps: 130000
+Best mean reward: 12.84 - Last mean reward per episode: 12.54
+Mean score over last 118.00 episodes: 48.75
+Num timesteps: 131000
+Best mean reward: 12.84 - Last mean reward per episode: 12.79
+Mean score over last 118.00 episodes: 48.75
+Num timesteps: 132000
+Best mean reward: 12.84 - Last mean reward per episode: 12.69
+Mean score over last 119.00 episodes: 48.81
+Num timesteps: 133000
+Best mean reward: 12.84 - Last mean reward per episode: 12.68
+Mean score over last 119.00 episodes: 48.81
+Num timesteps: 134000
+Best mean reward: 12.84 - Last mean reward per episode: 12.70
+Mean score over last 120.00 episodes: 48.84
+------------------------------------
+| approxkl           | 0.11929077  |
+| clipfrac           | 0.20898438  |
+| ep_len_mean        | 186         |
+| ep_reward_mean     | 12.6        |
+| explained_variance | 0.931       |
+| fps                | 29          |
+| n_updates          | 1050        |
+| policy_entropy     | 0.27769202  |
+| policy_loss        | -0.03863022 |
+| serial_timesteps   | 134400      |
+| time_elapsed       | 4.86e+03    |
+| total_timesteps    | 134400      |
+| value_loss         | 0.010838018 |
+------------------------------------
+Num timesteps: 135000
+Best mean reward: 12.84 - Last mean reward per episode: 12.64
+Mean score over last 120.00 episodes: 48.84
+Num timesteps: 136000
+Best mean reward: 12.84 - Last mean reward per episode: 12.85
+Mean score over last 122.00 episodes: 49.02
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 137000
+Best mean reward: 12.85 - Last mean reward per episode: 13.05
+Mean score over last 125.00 episodes: 49.11
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 138000
+Best mean reward: 13.05 - Last mean reward per episode: 13.01
+Mean score over last 128.00 episodes: 49.01
+Num timesteps: 139000
+Best mean reward: 13.05 - Last mean reward per episode: 12.95
+Mean score over last 130.00 episodes: 48.95
+Num timesteps: 140000
+Best mean reward: 13.05 - Last mean reward per episode: 13.08
+Mean score over last 130.00 episodes: 48.95
+Saving new best model to Logs\ppo2\best_model
+-------------------------------------
+| approxkl           | 0.17984004   |
+| clipfrac           | 0.21484375   |
+| ep_len_mean        | 192          |
+| ep_reward_mean     | 13.2         |
+| explained_variance | 0.98         |
+| fps                | 30           |
+| n_updates          | 1100         |
+| policy_entropy     | 0.29556423   |
+| policy_loss        | -0.04158961  |
+| serial_timesteps   | 140800       |
+| time_elapsed       | 5.08e+03     |
+| total_timesteps    | 140800       |
+| value_loss         | 0.0049594296 |
+-------------------------------------
+Num timesteps: 141000
+Best mean reward: 13.08 - Last mean reward per episode: 13.18
+Mean score over last 131.00 episodes: 48.92
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 142000
+Best mean reward: 13.18 - Last mean reward per episode: 13.10
+Mean score over last 131.00 episodes: 48.92
+Num timesteps: 143000
+Best mean reward: 13.18 - Last mean reward per episode: 12.78
+Mean score over last 132.00 episodes: 48.94
+Num timesteps: 144000
+Best mean reward: 13.18 - Last mean reward per episode: 12.84
+Mean score over last 133.00 episodes: 48.96
+Num timesteps: 145000
+Best mean reward: 13.18 - Last mean reward per episode: 12.78
+Mean score over last 133.00 episodes: 48.96
+Num timesteps: 146000
+Best mean reward: 13.18 - Last mean reward per episode: 12.80
+Mean score over last 133.00 episodes: 48.96
+Num timesteps: 147000
+Best mean reward: 13.18 - Last mean reward per episode: 12.47
+Mean score over last 136.00 episodes: 49.04
+-------------------------------------
+| approxkl           | 0.2554331    |
+| clipfrac           | 0.2421875    |
+| ep_len_mean        | 188          |
+| ep_reward_mean     | 12.5         |
+| explained_variance | 0.945        |
+| fps                | 27           |
+| n_updates          | 1150         |
+| policy_entropy     | 0.39782262   |
+| policy_loss        | -0.049050614 |
+| serial_timesteps   | 147200       |
+| time_elapsed       | 5.31e+03     |
+| total_timesteps    | 147200       |
+| value_loss         | 0.015558419  |
+-------------------------------------
+Num timesteps: 148000
+Best mean reward: 13.18 - Last mean reward per episode: 12.35
+Mean score over last 136.00 episodes: 49.04
+Num timesteps: 149000
+Best mean reward: 13.18 - Last mean reward per episode: 12.16
+Mean score over last 138.00 episodes: 48.99
+Num timesteps: 150000
+Best mean reward: 13.18 - Last mean reward per episode: 12.20
+Mean score over last 138.00 episodes: 48.99
+Num timesteps: 151000
+Best mean reward: 13.18 - Last mean reward per episode: 12.42
+Mean score over last 138.00 episodes: 48.99
+Num timesteps: 152000
+Best mean reward: 13.18 - Last mean reward per episode: 12.37
+Mean score over last 139.00 episodes: 48.96
+Num timesteps: 153000
+Best mean reward: 13.18 - Last mean reward per episode: 12.20
+Mean score over last 140.00 episodes: 48.94
+-------------------------------------
+| approxkl           | 0.07276126   |
+| clipfrac           | 0.1953125    |
+| ep_len_mean        | 182          |
+| ep_reward_mean     | 11.9         |
+| explained_variance | 0.97         |
+| fps                | 28           |
+| n_updates          | 1200         |
+| policy_entropy     | 0.3091713    |
+| policy_loss        | -0.048180867 |
+| serial_timesteps   | 153600       |
+| time_elapsed       | 5.53e+03     |
+| total_timesteps    | 153600       |
+| value_loss         | 0.019127922  |
+-------------------------------------
+Num timesteps: 154000
+Best mean reward: 13.18 - Last mean reward per episode: 11.71
+Mean score over last 141.00 episodes: 48.91
+Num timesteps: 155000
+Best mean reward: 13.18 - Last mean reward per episode: 11.75
+Mean score over last 142.00 episodes: 48.96
+Num timesteps: 156000
+Best mean reward: 13.18 - Last mean reward per episode: 11.28
+Mean score over last 143.00 episodes: 48.93
+Num timesteps: 157000
+Best mean reward: 13.18 - Last mean reward per episode: 11.76
+Mean score over last 144.00 episodes: 49.05
+Num timesteps: 158000
+Best mean reward: 13.18 - Last mean reward per episode: 11.79
+Mean score over last 144.00 episodes: 49.05
+Num timesteps: 159000
+Best mean reward: 13.18 - Last mean reward per episode: 11.91
+Mean score over last 145.00 episodes: 49.02
+Num timesteps: 160000
+Best mean reward: 13.18 - Last mean reward per episode: 11.70
+Mean score over last 146.00 episodes: 48.99
+-------------------------------------
+| approxkl           | 0.1470176    |
+| clipfrac           | 0.20117188   |
+| ep_len_mean        | 178          |
+| ep_reward_mean     | 11.7         |
+| explained_variance | -0.737       |
+| fps                | 27           |
+| n_updates          | 1250         |
+| policy_entropy     | 0.5544131    |
+| policy_loss        | -0.055500407 |
+| serial_timesteps   | 160000       |
+| time_elapsed       | 5.76e+03     |
+| total_timesteps    | 160000       |
+| value_loss         | 0.11330361   |
+-------------------------------------
+Num timesteps: 161000
+Best mean reward: 13.18 - Last mean reward per episode: 11.78
+Mean score over last 146.00 episodes: 48.99
+Num timesteps: 162000
+Best mean reward: 13.18 - Last mean reward per episode: 11.99
+Mean score over last 148.00 episodes: 49.01
+Num timesteps: 163000
+Best mean reward: 13.18 - Last mean reward per episode: 12.04
+Mean score over last 148.00 episodes: 49.01
+Num timesteps: 164000
+Best mean reward: 13.18 - Last mean reward per episode: 12.25
+Mean score over last 148.00 episodes: 49.01
+Num timesteps: 165000
+Best mean reward: 13.18 - Last mean reward per episode: 12.04
+Mean score over last 148.00 episodes: 49.01
+Num timesteps: 166000
+Best mean reward: 13.18 - Last mean reward per episode: 12.12
+Mean score over last 149.00 episodes: 48.98
+------------------------------------
+| approxkl           | 0.108737305 |
+| clipfrac           | 0.21875     |
+| ep_len_mean        | 188         |
+| ep_reward_mean     | 12.2        |
+| explained_variance | 0.646       |
+| fps                | 28          |
+| n_updates          | 1300        |
+| policy_entropy     | 0.4373794   |
+| policy_loss        | -0.06103359 |
+| serial_timesteps   | 166400      |
+| time_elapsed       | 5.99e+03    |
+| total_timesteps    | 166400      |
+| value_loss         | 0.05553527  |
+------------------------------------
+Num timesteps: 167000
+Best mean reward: 13.18 - Last mean reward per episode: 12.40
+Mean score over last 149.00 episodes: 48.98
+Num timesteps: 168000
+Best mean reward: 13.18 - Last mean reward per episode: 12.39
+Mean score over last 150.00 episodes: 48.99
+Num timesteps: 169000
+Best mean reward: 13.18 - Last mean reward per episode: 12.56
+Mean score over last 151.00 episodes: 48.97
+Num timesteps: 170000
+Best mean reward: 13.18 - Last mean reward per episode: 12.54
+Mean score over last 151.00 episodes: 48.97
+Num timesteps: 171000
+Best mean reward: 13.18 - Last mean reward per episode: 12.47
+Mean score over last 151.00 episodes: 48.97
+Num timesteps: 172000
+Best mean reward: 13.18 - Last mean reward per episode: 12.31
+Mean score over last 152.00 episodes: 49.02
+------------------------------------
+| approxkl           | 0.041878693 |
+| clipfrac           | 0.2109375   |
+| ep_len_mean        | 196         |
+| ep_reward_mean     | 12.6        |
+| explained_variance | 0.643       |
+| fps                | 27          |
+| n_updates          | 1350        |
+| policy_entropy     | 0.48600522  |
+| policy_loss        | -0.06295986 |
+| serial_timesteps   | 172800      |
+| time_elapsed       | 6.22e+03    |
+| total_timesteps    | 172800      |
+| value_loss         | 0.06656755  |
+------------------------------------
+Num timesteps: 173000
+Best mean reward: 13.18 - Last mean reward per episode: 12.86
+Mean score over last 154.00 episodes: 49.23
+Num timesteps: 174000
+Best mean reward: 13.18 - Last mean reward per episode: 12.96
+Mean score over last 155.00 episodes: 49.25
+Num timesteps: 175000
+Best mean reward: 13.18 - Last mean reward per episode: 12.95
+Mean score over last 155.00 episodes: 49.25
+Num timesteps: 176000
+Best mean reward: 13.18 - Last mean reward per episode: 13.43
+Mean score over last 155.00 episodes: 49.25
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 177000
+Best mean reward: 13.43 - Last mean reward per episode: 13.22
+Mean score over last 155.00 episodes: 49.25
+Num timesteps: 178000
+Best mean reward: 13.43 - Last mean reward per episode: 13.16
+Mean score over last 157.00 episodes: 49.29
+Num timesteps: 179000
+Best mean reward: 13.43 - Last mean reward per episode: 12.92
+Mean score over last 158.00 episodes: 49.27
+------------------------------------
+| approxkl           | 0.13888723  |
+| clipfrac           | 0.25976562  |
+| ep_len_mean        | 198         |
+| ep_reward_mean     | 12.9        |
+| explained_variance | 0.984       |
+| fps                | 26          |
+| n_updates          | 1400        |
+| policy_entropy     | 0.28677526  |
+| policy_loss        | -0.05475401 |
+| serial_timesteps   | 179200      |
+| time_elapsed       | 6.45e+03    |
+| total_timesteps    | 179200      |
+| value_loss         | 0.010875859 |
+------------------------------------
+Num timesteps: 180000
+Best mean reward: 13.43 - Last mean reward per episode: 12.90
+Mean score over last 159.00 episodes: 49.23
+Num timesteps: 181000
+Best mean reward: 13.43 - Last mean reward per episode: 13.07
+Mean score over last 160.00 episodes: 49.29
+Num timesteps: 182000
+Best mean reward: 13.43 - Last mean reward per episode: 12.80
+Mean score over last 162.00 episodes: 49.31
+Num timesteps: 183000
+Best mean reward: 13.43 - Last mean reward per episode: 12.47
+Mean score over last 162.00 episodes: 49.31
+Num timesteps: 184000
+Best mean reward: 13.43 - Last mean reward per episode: 12.30
+Mean score over last 164.00 episodes: 49.35
+Num timesteps: 185000
+Best mean reward: 13.43 - Last mean reward per episode: 11.47
+Mean score over last 164.00 episodes: 49.35
+-------------------------------------
+| approxkl           | 0.091068     |
+| clipfrac           | 0.13476562   |
+| ep_len_mean        | 178          |
+| ep_reward_mean     | 11           |
+| explained_variance | 0.478        |
+| fps                | 26           |
+| n_updates          | 1450         |
+| policy_entropy     | 0.17742378   |
+| policy_loss        | -0.023504615 |
+| serial_timesteps   | 185600       |
+| time_elapsed       | 6.69e+03     |
+| total_timesteps    | 185600       |
+| value_loss         | 0.34016746   |
+-------------------------------------
+Num timesteps: 186000
+Best mean reward: 13.43 - Last mean reward per episode: 11.02
+Mean score over last 166.00 episodes: 49.30
+Num timesteps: 187000
+Best mean reward: 13.43 - Last mean reward per episode: 10.69
+Mean score over last 167.00 episodes: 49.34
+Num timesteps: 188000
+Best mean reward: 13.43 - Last mean reward per episode: 11.10
+Mean score over last 169.00 episodes: 49.36
+Num timesteps: 189000
+Best mean reward: 13.43 - Last mean reward per episode: 11.21
+Mean score over last 169.00 episodes: 49.36
+Num timesteps: 190000
+Best mean reward: 13.43 - Last mean reward per episode: 11.14
+Mean score over last 169.00 episodes: 49.36
+Num timesteps: 191000
+Best mean reward: 13.43 - Last mean reward per episode: 11.03
+Mean score over last 169.00 episodes: 49.36
+Num timesteps: 192000
+Best mean reward: 13.43 - Last mean reward per episode: 10.91
+Mean score over last 170.00 episodes: 49.45
+-------------------------------------
+| approxkl           | 0.47773153   |
+| clipfrac           | 0.1171875    |
+| ep_len_mean        | 177          |
+| ep_reward_mean     | 10.9         |
+| explained_variance | 0.546        |
+| fps                | 26           |
+| n_updates          | 1500         |
+| policy_entropy     | 0.12974896   |
+| policy_loss        | -0.018803623 |
+| serial_timesteps   | 192000       |
+| time_elapsed       | 6.92e+03     |
+| total_timesteps    | 192000       |
+| value_loss         | 0.12889792   |
+-------------------------------------
+Num timesteps: 193000
+Best mean reward: 13.43 - Last mean reward per episode: 11.07
+Mean score over last 171.00 episodes: 49.53
+Num timesteps: 194000
+Best mean reward: 13.43 - Last mean reward per episode: 11.07
+Mean score over last 171.00 episodes: 49.53
+Num timesteps: 195000
+Best mean reward: 13.43 - Last mean reward per episode: 11.11
+Mean score over last 171.00 episodes: 49.53
+Num timesteps: 196000
+Best mean reward: 13.43 - Last mean reward per episode: 10.87
+Mean score over last 172.00 episodes: 49.55
+Num timesteps: 197000
+Best mean reward: 13.43 - Last mean reward per episode: 11.24
+Mean score over last 173.00 episodes: 49.52
+Num timesteps: 198000
+Best mean reward: 13.43 - Last mean reward per episode: 11.25
+Mean score over last 174.00 episodes: 49.57
+-------------------------------------
+| approxkl           | 0.11520199   |
+| clipfrac           | 0.12695312   |
+| ep_len_mean        | 178          |
+| ep_reward_mean     | 11.2         |
+| explained_variance | 0.966        |
+| fps                | 26           |
+| n_updates          | 1550         |
+| policy_entropy     | 0.17553933   |
+| policy_loss        | -0.024106823 |
+| serial_timesteps   | 198400       |
+| time_elapsed       | 7.15e+03     |
+| total_timesteps    | 198400       |
+| value_loss         | 0.024739902  |
+-------------------------------------
+Num timesteps: 199000
+Best mean reward: 13.43 - Last mean reward per episode: 10.93
+Mean score over last 175.00 episodes: 49.55
+Num timesteps: 200000
+Best mean reward: 13.43 - Last mean reward per episode: 11.18
+Mean score over last 175.00 episodes: 49.55
+Num timesteps: 201000
+Best mean reward: 13.43 - Last mean reward per episode: 10.59
+Mean score over last 176.00 episodes: 49.65
+Num timesteps: 202000
+Best mean reward: 13.43 - Last mean reward per episode: 10.35
+Mean score over last 177.00 episodes: 49.66
+Num timesteps: 203000
+Best mean reward: 13.43 - Last mean reward per episode: 11.09
+Mean score over last 178.00 episodes: 49.67
+Num timesteps: 204000
+Best mean reward: 13.43 - Last mean reward per episode: 11.18
+Mean score over last 180.00 episodes: 49.63
+------------------------------------
+| approxkl           | 0.117504634 |
+| clipfrac           | 0.23242188  |
+| ep_len_mean        | 179         |
+| ep_reward_mean     | 11.4        |
+| explained_variance | 0.904       |
+| fps                | 28          |
+| n_updates          | 1600        |
+| policy_entropy     | 0.36977962  |
+| policy_loss        | -0.05220425 |
+| serial_timesteps   | 204800      |
+| time_elapsed       | 7.39e+03    |
+| total_timesteps    | 204800      |
+| value_loss         | 0.015721679 |
+------------------------------------
+Num timesteps: 205000
+Best mean reward: 13.43 - Last mean reward per episode: 11.36
+Mean score over last 180.00 episodes: 49.63
+Num timesteps: 206000
+Best mean reward: 13.43 - Last mean reward per episode: 10.75
+Mean score over last 182.00 episodes: 49.57
+Num timesteps: 207000
+Best mean reward: 13.43 - Last mean reward per episode: 10.60
+Mean score over last 182.00 episodes: 49.57
+Num timesteps: 208000
+Best mean reward: 13.43 - Last mean reward per episode: 10.34
+Mean score over last 184.00 episodes: 49.52
+Num timesteps: 209000
+Best mean reward: 13.43 - Last mean reward per episode: 10.29
+Mean score over last 184.00 episodes: 49.52
+Num timesteps: 210000
+Best mean reward: 13.43 - Last mean reward per episode: 10.48
+Mean score over last 185.00 episodes: 49.61
+Num timesteps: 211000
+Best mean reward: 13.43 - Last mean reward per episode: 10.34
+Mean score over last 185.00 episodes: 49.61
+-------------------------------------
+| approxkl           | 0.34148175   |
+| clipfrac           | 0.14648438   |
+| ep_len_mean        | 174          |
+| ep_reward_mean     | 10.2         |
+| explained_variance | 0.464        |
+| fps                | 29           |
+| n_updates          | 1650         |
+| policy_entropy     | 0.12696542   |
+| policy_loss        | -0.023204904 |
+| serial_timesteps   | 211200       |
+| time_elapsed       | 7.61e+03     |
+| total_timesteps    | 211200       |
+| value_loss         | 0.15251142   |
+-------------------------------------
+Num timesteps: 212000
+Best mean reward: 13.43 - Last mean reward per episode: 9.99
+Mean score over last 185.00 episodes: 49.61
+Num timesteps: 213000
+Best mean reward: 13.43 - Last mean reward per episode: 10.31
+Mean score over last 187.00 episodes: 49.84
+Num timesteps: 214000
+Best mean reward: 13.43 - Last mean reward per episode: 10.36
+Mean score over last 188.00 episodes: 50.03
+Num timesteps: 215000
+Best mean reward: 13.43 - Last mean reward per episode: 10.25
+Mean score over last 190.00 episodes: 50.05
+Num timesteps: 216000
+Best mean reward: 13.43 - Last mean reward per episode: 10.58
+Mean score over last 191.00 episodes: 50.06
+Num timesteps: 217000
+Best mean reward: 13.43 - Last mean reward per episode: 10.57
+Mean score over last 191.00 episodes: 50.06
+-----------------------------------
+| approxkl           | 0.21753035 |
+| clipfrac           | 0.15039062 |
+| ep_len_mean        | 179        |
+| ep_reward_mean     | 10.5       |
+| explained_variance | -0.951     |
+| fps                | 31         |
+| n_updates          | 1700       |
+| policy_entropy     | 0.16030456 |
+| policy_loss        | -0.0225378 |
+| serial_timesteps   | 217600     |
+| time_elapsed       | 7.83e+03   |
+| total_timesteps    | 217600     |
+| value_loss         | 0.14098024 |
+-----------------------------------
+Num timesteps: 218000
+Best mean reward: 13.43 - Last mean reward per episode: 10.79
+Mean score over last 192.00 episodes: 50.04
+Num timesteps: 219000
+Best mean reward: 13.43 - Last mean reward per episode: 11.34
+Mean score over last 192.00 episodes: 50.04
+Num timesteps: 220000
+Best mean reward: 13.43 - Last mean reward per episode: 11.50
+Mean score over last 193.00 episodes: 50.02
+Num timesteps: 221000
+Best mean reward: 13.43 - Last mean reward per episode: 11.95
+Mean score over last 193.00 episodes: 50.02
+Num timesteps: 222000
+Best mean reward: 13.43 - Last mean reward per episode: 11.84
+Mean score over last 193.00 episodes: 50.02
+Num timesteps: 223000
+Best mean reward: 13.43 - Last mean reward per episode: 12.12
+Mean score over last 193.00 episodes: 50.02
+Num timesteps: 224000
+Best mean reward: 13.43 - Last mean reward per episode: 12.21
+Mean score over last 194.00 episodes: 50.03
+------------------------------------
+| approxkl           | 0.059497457 |
+| clipfrac           | 0.23828125  |
+| ep_len_mean        | 197         |
+| ep_reward_mean     | 12.2        |
+| explained_variance | -0.491      |
+| fps                | 26          |
+| n_updates          | 1750        |
+| policy_entropy     | 0.4798591   |
+| policy_loss        | -0.06556249 |
+| serial_timesteps   | 224000      |
+| time_elapsed       | 8.05e+03    |
+| total_timesteps    | 224000      |
+| value_loss         | 0.103231624 |
+------------------------------------
+Num timesteps: 225000
+Best mean reward: 13.43 - Last mean reward per episode: 12.44
+Mean score over last 196.00 episodes: 49.99
+Num timesteps: 226000
+Best mean reward: 13.43 - Last mean reward per episode: 12.78
+Mean score over last 196.00 episodes: 49.99
+Num timesteps: 227000
+Best mean reward: 13.43 - Last mean reward per episode: 13.13
+Mean score over last 196.00 episodes: 49.99
+Num timesteps: 228000
+Best mean reward: 13.43 - Last mean reward per episode: 13.25
+Mean score over last 197.00 episodes: 49.97
+Num timesteps: 229000
+Best mean reward: 13.43 - Last mean reward per episode: 13.33
+Mean score over last 198.00 episodes: 50.03
+Num timesteps: 230000
+Best mean reward: 13.43 - Last mean reward per episode: 13.26
+Mean score over last 198.00 episodes: 50.03
+-------------------------------------
+| approxkl           | 0.28204682   |
+| clipfrac           | 0.22460938   |
+| ep_len_mean        | 200          |
+| ep_reward_mean     | 13.3         |
+| explained_variance | 0.558        |
+| fps                | 27           |
+| n_updates          | 1800         |
+| policy_entropy     | 0.20337929   |
+| policy_loss        | -0.025268529 |
+| serial_timesteps   | 230400       |
+| time_elapsed       | 8.27e+03     |
+| total_timesteps    | 230400       |
+| value_loss         | 0.13312668   |
+-------------------------------------
+Num timesteps: 231000
+Best mean reward: 13.43 - Last mean reward per episode: 13.21
+Mean score over last 198.00 episodes: 50.03
+Num timesteps: 232000
+Best mean reward: 13.43 - Last mean reward per episode: 13.22
+Mean score over last 199.00 episodes: 50.00
+Num timesteps: 233000
+Best mean reward: 13.43 - Last mean reward per episode: 13.00
+Mean score over last 200.00 episodes: 49.97
+Num timesteps: 234000
+Best mean reward: 13.43 - Last mean reward per episode: 13.13
+Mean score over last 200.00 episodes: 49.97
+Num timesteps: 235000
+Best mean reward: 13.43 - Last mean reward per episode: 13.16
+Mean score over last 200.00 episodes: 49.97
+Num timesteps: 236000
+Best mean reward: 13.43 - Last mean reward per episode: 13.26
+Mean score over last 201.00 episodes: 49.99
+------------------------------------
+| approxkl           | 0.07612765  |
+| clipfrac           | 0.1484375   |
+| ep_len_mean        | 204         |
+| ep_reward_mean     | 13.3        |
+| explained_variance | 0.701       |
+| fps                | 28          |
+| n_updates          | 1850        |
+| policy_entropy     | 0.16422363  |
+| policy_loss        | -0.02647018 |
+| serial_timesteps   | 236800      |
+| time_elapsed       | 8.49e+03    |
+| total_timesteps    | 236800      |
+| value_loss         | 0.106002584 |
+------------------------------------
+Num timesteps: 237000
+Best mean reward: 13.43 - Last mean reward per episode: 13.27
+Mean score over last 202.00 episodes: 49.96
+Num timesteps: 238000
+Best mean reward: 13.43 - Last mean reward per episode: 13.59
+Mean score over last 203.00 episodes: 50.01
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 239000
+Best mean reward: 13.59 - Last mean reward per episode: 13.24
+Mean score over last 203.00 episodes: 50.01
+Num timesteps: 240000
+Best mean reward: 13.59 - Last mean reward per episode: 13.50
+Mean score over last 206.00 episodes: 49.96
+Num timesteps: 241000
+Best mean reward: 13.59 - Last mean reward per episode: 13.44
+Mean score over last 207.00 episodes: 49.97
+Num timesteps: 242000
+Best mean reward: 13.59 - Last mean reward per episode: 13.59
+Mean score over last 207.00 episodes: 49.97
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 243000
+Best mean reward: 13.59 - Last mean reward per episode: 13.38
+Mean score over last 209.00 episodes: 49.93
+-------------------------------------
+| approxkl           | 0.07030101   |
+| clipfrac           | 0.20898438   |
+| ep_len_mean        | 197          |
+| ep_reward_mean     | 13.5         |
+| explained_variance | 0.968        |
+| fps                | 26           |
+| n_updates          | 1900         |
+| policy_entropy     | 0.31729177   |
+| policy_loss        | -0.051549092 |
+| serial_timesteps   | 243200       |
+| time_elapsed       | 8.72e+03     |
+| total_timesteps    | 243200       |
+| value_loss         | 0.01249661   |
+-------------------------------------
+Num timesteps: 244000
+Best mean reward: 13.59 - Last mean reward per episode: 13.22
+Mean score over last 211.00 episodes: 49.89
+Num timesteps: 245000
+Best mean reward: 13.59 - Last mean reward per episode: 13.16
+Mean score over last 211.00 episodes: 49.89
+Num timesteps: 246000
+Best mean reward: 13.59 - Last mean reward per episode: 12.88
+Mean score over last 211.00 episodes: 49.89
+Num timesteps: 247000
+Best mean reward: 13.59 - Last mean reward per episode: 12.78
+Mean score over last 212.00 episodes: 49.92
+Num timesteps: 248000
+Best mean reward: 13.59 - Last mean reward per episode: 12.72
+Mean score over last 213.00 episodes: 49.90
+Num timesteps: 249000
+Best mean reward: 13.59 - Last mean reward per episode: 12.34
+Mean score over last 214.00 episodes: 49.87
+-------------------------------------
+| approxkl           | 0.16052273   |
+| clipfrac           | 0.13671875   |
+| ep_len_mean        | 194          |
+| ep_reward_mean     | 12.4         |
+| explained_variance | 0.977        |
+| fps                | 27           |
+| n_updates          | 1950         |
+| policy_entropy     | 0.1998334    |
+| policy_loss        | -0.035987873 |
+| serial_timesteps   | 249600       |
+| time_elapsed       | 8.94e+03     |
+| total_timesteps    | 249600       |
+| value_loss         | 0.01710463   |
+-------------------------------------
+Num timesteps: 250000
+Best mean reward: 13.59 - Last mean reward per episode: 12.51
+Mean score over last 216.00 episodes: 49.87
+Num timesteps: 251000
+Best mean reward: 13.59 - Last mean reward per episode: 12.83
+Mean score over last 217.00 episodes: 49.85
+Num timesteps: 252000
+Best mean reward: 13.59 - Last mean reward per episode: 12.53
+Mean score over last 218.00 episodes: 49.83
+Num timesteps: 253000
+Best mean reward: 13.59 - Last mean reward per episode: 12.59
+Mean score over last 218.00 episodes: 49.83
+Num timesteps: 254000
+Best mean reward: 13.59 - Last mean reward per episode: 12.63
+Mean score over last 219.00 episodes: 49.81
+Num timesteps: 255000
+Best mean reward: 13.59 - Last mean reward per episode: 12.38
+Mean score over last 220.00 episodes: 49.88
+Num timesteps: 256000
+Best mean reward: 13.59 - Last mean reward per episode: 12.65
+Mean score over last 223.00 episodes: 49.87
+-------------------------------------
+| approxkl           | 0.1947583    |
+| clipfrac           | 0.13867188   |
+| ep_len_mean        | 187          |
+| ep_reward_mean     | 12.7         |
+| explained_variance | 0.897        |
+| fps                | 27           |
+| n_updates          | 2000         |
+| policy_entropy     | 0.12933274   |
+| policy_loss        | -0.034769513 |
+| serial_timesteps   | 256000       |
+| time_elapsed       | 9.17e+03     |
+| total_timesteps    | 256000       |
+| value_loss         | 0.009770299  |
+-------------------------------------
+Num timesteps: 257000
+Best mean reward: 13.59 - Last mean reward per episode: 12.23
+Mean score over last 224.00 episodes: 49.85
+Num timesteps: 258000
+Best mean reward: 13.59 - Last mean reward per episode: 12.12
+Mean score over last 226.00 episodes: 49.81
+Num timesteps: 259000
+Best mean reward: 13.59 - Last mean reward per episode: 11.86
+Mean score over last 227.00 episodes: 49.79
+Num timesteps: 260000
+Best mean reward: 13.59 - Last mean reward per episode: 11.85
+Mean score over last 227.00 episodes: 49.79
+Num timesteps: 261000
+Best mean reward: 13.59 - Last mean reward per episode: 11.71
+Mean score over last 228.00 episodes: 49.77
+Num timesteps: 262000
+Best mean reward: 13.59 - Last mean reward per episode: 11.75
+Mean score over last 228.00 episodes: 49.77
+------------------------------------
+| approxkl           | 0.039659176 |
+| clipfrac           | 0.22070312  |
+| ep_len_mean        | 187         |
+| ep_reward_mean     | 12.1        |
+| explained_variance | 0.239       |
+| fps                | 28          |
+| n_updates          | 2050        |
+| policy_entropy     | 0.40337536  |
+| policy_loss        | -0.05862583 |
+| serial_timesteps   | 262400      |
+| time_elapsed       | 9.4e+03     |
+| total_timesteps    | 262400      |
+| value_loss         | 0.07132743  |
+------------------------------------
+Num timesteps: 263000
+Best mean reward: 13.59 - Last mean reward per episode: 12.04
+Mean score over last 229.00 episodes: 49.92
+Num timesteps: 264000
+Best mean reward: 13.59 - Last mean reward per episode: 12.67
+Mean score over last 232.00 episodes: 49.94
+Num timesteps: 265000
+Best mean reward: 13.59 - Last mean reward per episode: 12.80
+Mean score over last 234.00 episodes: 49.90
+Num timesteps: 266000
+Best mean reward: 13.59 - Last mean reward per episode: 12.71
+Mean score over last 235.00 episodes: 49.89
+Num timesteps: 267000
+Best mean reward: 13.59 - Last mean reward per episode: 12.90
+Mean score over last 237.00 episodes: 49.92
+Num timesteps: 268000
+Best mean reward: 13.59 - Last mean reward per episode: 12.24
+Mean score over last 238.00 episodes: 49.93
+-------------------------------------
+| approxkl           | 0.37632012   |
+| clipfrac           | 0.17773438   |
+| ep_len_mean        | 186          |
+| ep_reward_mean     | 12.2         |
+| explained_variance | 0.682        |
+| fps                | 26           |
+| n_updates          | 2100         |
+| policy_entropy     | 0.16165306   |
+| policy_loss        | -0.028461596 |
+| serial_timesteps   | 268800       |
+| time_elapsed       | 9.63e+03     |
+| total_timesteps    | 268800       |
+| value_loss         | 0.113352254  |
+-------------------------------------
+Num timesteps: 269000
+Best mean reward: 13.59 - Last mean reward per episode: 12.24
+Mean score over last 238.00 episodes: 49.93
+Num timesteps: 270000
+Best mean reward: 13.59 - Last mean reward per episode: 11.69
+Mean score over last 238.00 episodes: 49.93
+Num timesteps: 271000
+Best mean reward: 13.59 - Last mean reward per episode: 11.48
+Mean score over last 239.00 episodes: 50.12
+Num timesteps: 272000
+Best mean reward: 13.59 - Last mean reward per episode: 11.32
+Mean score over last 240.00 episodes: 50.10
+Num timesteps: 273000
+Best mean reward: 13.59 - Last mean reward per episode: 11.71
+Mean score over last 240.00 episodes: 50.10
+Num timesteps: 274000
+Best mean reward: 13.59 - Last mean reward per episode: 11.32
+Mean score over last 240.00 episodes: 50.10
+Num timesteps: 275000
+Best mean reward: 13.59 - Last mean reward per episode: 11.51
+Mean score over last 241.00 episodes: 50.16
+-------------------------------------
+| approxkl           | 0.23736428   |
+| clipfrac           | 0.17382812   |
+| ep_len_mean        | 188          |
+| ep_reward_mean     | 11.5         |
+| explained_variance | 0.411        |
+| fps                | 25           |
+| n_updates          | 2150         |
+| policy_entropy     | 0.20720105   |
+| policy_loss        | -0.017062655 |
+| serial_timesteps   | 275200       |
+| time_elapsed       | 9.87e+03     |
+| total_timesteps    | 275200       |
+| value_loss         | 0.06453587   |
+-------------------------------------
+Num timesteps: 276000
+Best mean reward: 13.59 - Last mean reward per episode: 11.52
+Mean score over last 241.00 episodes: 50.16
+Num timesteps: 277000
+Best mean reward: 13.59 - Last mean reward per episode: 11.35
+Mean score over last 241.00 episodes: 50.16
+Num timesteps: 278000
+Best mean reward: 13.59 - Last mean reward per episode: 11.61
+Mean score over last 243.00 episodes: 50.20
+Num timesteps: 279000
+Best mean reward: 13.59 - Last mean reward per episode: 11.48
+Mean score over last 243.00 episodes: 50.20
+Num timesteps: 280000
+Best mean reward: 13.59 - Last mean reward per episode: 11.49
+Mean score over last 243.00 episodes: 50.20
+Num timesteps: 281000
+Best mean reward: 13.59 - Last mean reward per episode: 11.16
+Mean score over last 245.00 episodes: 50.22
+-------------------------------------
+| approxkl           | 0.05800541   |
+| clipfrac           | 0.18164062   |
+| ep_len_mean        | 190          |
+| ep_reward_mean     | 11           |
+| explained_variance | 0.721        |
+| fps                | 30           |
+| n_updates          | 2200         |
+| policy_entropy     | 0.3646672    |
+| policy_loss        | -0.051724605 |
+| serial_timesteps   | 281600       |
+| time_elapsed       | 1.01e+04     |
+| total_timesteps    | 281600       |
+| value_loss         | 0.055723082  |
+-------------------------------------
+Num timesteps: 282000
+Best mean reward: 13.59 - Last mean reward per episode: 10.83
+Mean score over last 245.00 episodes: 50.22
+Num timesteps: 283000
+Best mean reward: 13.59 - Last mean reward per episode: 10.59
+Mean score over last 247.00 episodes: 50.33
+Num timesteps: 284000
+Best mean reward: 13.59 - Last mean reward per episode: 10.34
+Mean score over last 247.00 episodes: 50.33
+Num timesteps: 285000
+Best mean reward: 13.59 - Last mean reward per episode: 9.98
+Mean score over last 249.00 episodes: 50.29
+Num timesteps: 286000
+Best mean reward: 13.59 - Last mean reward per episode: 10.47
+Mean score over last 249.00 episodes: 50.29
+Num timesteps: 287000
+Best mean reward: 13.59 - Last mean reward per episode: 10.36
+Mean score over last 250.00 episodes: 50.26
+Num timesteps: 288000
+Best mean reward: 13.59 - Last mean reward per episode: 10.30
+Mean score over last 251.00 episodes: 50.25
+------------------------------------
+| approxkl           | 0.33671284  |
+| clipfrac           | 0.16015625  |
+| ep_len_mean        | 188         |
+| ep_reward_mean     | 10.3        |
+| explained_variance | 0.767       |
+| fps                | 30          |
+| n_updates          | 2250        |
+| policy_entropy     | 0.15832278  |
+| policy_loss        | -0.02843801 |
+| serial_timesteps   | 288000      |
+| time_elapsed       | 1.03e+04    |
+| total_timesteps    | 288000      |
+| value_loss         | 0.07231797  |
+------------------------------------
+Num timesteps: 289000
+Best mean reward: 13.59 - Last mean reward per episode: 10.61
+Mean score over last 253.00 episodes: 50.26
+Num timesteps: 290000
+Best mean reward: 13.59 - Last mean reward per episode: 10.43
+Mean score over last 253.00 episodes: 50.26
+Num timesteps: 291000
+Best mean reward: 13.59 - Last mean reward per episode: 10.79
+Mean score over last 254.00 episodes: 50.31
+Num timesteps: 292000
+Best mean reward: 13.59 - Last mean reward per episode: 10.15
+Mean score over last 255.00 episodes: 50.29
+Num timesteps: 293000
+Best mean reward: 13.59 - Last mean reward per episode: 9.95
+Mean score over last 256.00 episodes: 50.34
+Num timesteps: 294000
+Best mean reward: 13.59 - Last mean reward per episode: 9.62
+Mean score over last 256.00 episodes: 50.34
+------------------------------------
+| approxkl           | 0.20668066  |
+| clipfrac           | 0.18945312  |
+| ep_len_mean        | 182         |
+| ep_reward_mean     | 9.91        |
+| explained_variance | 0.928       |
+| fps                | 29          |
+| n_updates          | 2300        |
+| policy_entropy     | 0.27342314  |
+| policy_loss        | -0.04731361 |
+| serial_timesteps   | 294400      |
+| time_elapsed       | 1.06e+04    |
+| total_timesteps    | 294400      |
+| value_loss         | 0.041330457 |
+------------------------------------
+Num timesteps: 295000
+Best mean reward: 13.59 - Last mean reward per episode: 10.06
+Mean score over last 258.00 episodes: 50.40
+Num timesteps: 296000
+Best mean reward: 13.59 - Last mean reward per episode: 9.72
+Mean score over last 261.00 episodes: 50.34
+Num timesteps: 297000
+Best mean reward: 13.59 - Last mean reward per episode: 9.73
+Mean score over last 261.00 episodes: 50.34
+Num timesteps: 298000
+Best mean reward: 13.59 - Last mean reward per episode: 9.82
+Mean score over last 264.00 episodes: 50.31
+Num timesteps: 299000
+Best mean reward: 13.59 - Last mean reward per episode: 9.85
+Mean score over last 265.00 episodes: 50.32
+Num timesteps: 300000
+Best mean reward: 13.59 - Last mean reward per episode: 9.73
+Mean score over last 266.00 episodes: 50.35
+-------------------------------------
+| approxkl           | 0.11725904   |
+| clipfrac           | 0.25976562   |
+| ep_len_mean        | 176          |
+| ep_reward_mean     | 9.74         |
+| explained_variance | 0.598        |
+| fps                | 27           |
+| n_updates          | 2350         |
+| policy_entropy     | 0.35060883   |
+| policy_loss        | -0.052552883 |
+| serial_timesteps   | 300800       |
+| time_elapsed       | 1.08e+04     |
+| total_timesteps    | 300800       |
+| value_loss         | 0.042340245  |
+-------------------------------------
+Num timesteps: 301000
+Best mean reward: 13.59 - Last mean reward per episode: 9.52
+Mean score over last 267.00 episodes: 50.33
+Num timesteps: 302000
+Best mean reward: 13.59 - Last mean reward per episode: 9.70
+Mean score over last 267.00 episodes: 50.33
+Num timesteps: 303000
+Best mean reward: 13.59 - Last mean reward per episode: 9.91
+Mean score over last 267.00 episodes: 50.33
+Num timesteps: 304000
+Best mean reward: 13.59 - Last mean reward per episode: 9.72
+Mean score over last 270.00 episodes: 50.29
+
+Process finished with exit code -1

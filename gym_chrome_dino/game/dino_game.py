@@ -67,7 +67,27 @@ class DinoGame():
     
     def restart(self):
         return self.driver.execute_script('Runner.instance_.restart();')
-    
+
+    def obstacle(self):
+        return self.driver.execute_script('return Runner.instance_.horizon.obstacles')
+
+    def rex(self):
+        return self.driver.execute_script('return Runner.instance_.tRex')
+
+    def get_speed(self):
+        try:
+            # Some obstacles have an offset, so that has to be added.
+            speed_offset = self.driver.execute_script("return (Runner.instance_.horizon.obstacles)[0].speedOffset")
+        except:
+            speed_offset = 0
+        speed_intrinsic = self.driver.execute_script("return Runner.instance_.currentSpeed")
+
+        speed_total = speed_offset + speed_intrinsic
+        return round(speed_total, 2)
+
+    def get_framerate(self):
+        return self.driver.execute_script('return Runner.instance_.msPerFrame')
+
     def close(self):
         self.driver.close()
     

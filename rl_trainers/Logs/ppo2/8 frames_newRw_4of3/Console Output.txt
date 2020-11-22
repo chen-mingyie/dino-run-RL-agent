@@ -1,0 +1,317 @@
+C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2020.2.1\plugins\python-ce\helpers\pydev\pydevd.py" --multiproc --qt-support=auto --client 127.0.0.1 --port 62098 --file C:/Users/chen_/PycharmProjects/dino-run_RL-agent/rl_trainers/start_training.py
+pydev debugger: process 4660 is connecting
+Connected to pydev debugger (build 202.6948.78)
+2020-11-19 23:08:19.917998: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cudart64_100.dll'; dlerror: cudart64_100.dll not found
+2020-11-19 23:08:19.918307: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\tf_util.py:191: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\tf_util.py:200: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+2020-11-19 23:08:40.929912: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2020-11-19 23:08:40.935588: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library nvcuda.dll
+2020-11-19 23:08:41.944839: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1650 major: 7 minor: 5 memoryClockRate(GHz): 1.515
+pciBusID: 0000:01:00.0
+2020-11-19 23:08:41.946582: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cudart64_100.dll'; dlerror: cudart64_100.dll not found
+2020-11-19 23:08:41.947692: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cublas64_100.dll'; dlerror: cublas64_100.dll not found
+2020-11-19 23:08:41.948619: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cufft64_100.dll'; dlerror: cufft64_100.dll not found
+2020-11-19 23:08:41.949472: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'curand64_100.dll'; dlerror: curand64_100.dll not found
+2020-11-19 23:08:41.950323: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cusolver64_100.dll'; dlerror: cusolver64_100.dll not found
+2020-11-19 23:08:41.951165: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cusparse64_100.dll'; dlerror: cusparse64_100.dll not found
+2020-11-19 23:08:41.959061: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2020-11-19 23:08:41.959350: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1641] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2020-11-19 23:08:42.053794: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-19 23:08:42.054180: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-19 23:08:42.054425: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\policies.py:117: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\input.py:25: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\tf_layers.py:103: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\distributions.py:326: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\common\distributions.py:327: The name tf.log is deprecated. Please use tf.math.log instead.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\ppo2\ppo2.py:190: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\ppo2\ppo2.py:198: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\tensorflow_core\python\ops\math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\ppo2\ppo2.py:206: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\ppo2\ppo2.py:240: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+WARNING:tensorflow:From C:\Users\chen_\anaconda3\envs\gym-chrome-dino-master\lib\site-packages\stable_baselines\ppo2\ppo2.py:242: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+--------------------------------------
+| approxkl           | 0.04862321    |
+| clipfrac           | 0.021875      |
+| ep_len_mean        | 116           |
+| ep_reward_mean     | 9.4           |
+| explained_variance | 0.127         |
+| fps                | 37            |
+| n_updates          | 1             |
+| policy_entropy     | 0.038886696   |
+| policy_loss        | -0.0039136214 |
+| serial_timesteps   | 128           |
+| time_elapsed       | 0             |
+| total_timesteps    | 640           |
+| value_loss         | 1.076885      |
+--------------------------------------
+Num timesteps: 5000
+Best mean reward: -inf - Last mean reward per episode: 1.47
+Mean score over last 7.00 episodes: 79.57
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 10000
+Best mean reward: 1.47 - Last mean reward per episode: -1.56
+Mean score over last 26.00 episodes: 67.85
+Num timesteps: 15000
+Best mean reward: 1.47 - Last mean reward per episode: -4.04
+Mean score over last 43.00 episodes: 67.14
+Num timesteps: 20000
+Best mean reward: 1.47 - Last mean reward per episode: -3.47
+Mean score over last 58.00 episodes: 70.48
+Num timesteps: 25000
+Best mean reward: 1.47 - Last mean reward per episode: -1.85
+Mean score over last 81.00 episodes: 72.00
+Num timesteps: 30000
+Best mean reward: 1.47 - Last mean reward per episode: -1.23
+Mean score over last 90.00 episodes: 71.23
+-------------------------------------
+| approxkl           | 0.053702712  |
+| clipfrac           | 0.08632813   |
+| ep_len_mean        | 78.9         |
+| ep_reward_mean     | -0.679       |
+| explained_variance | 0.0709       |
+| fps                | 26           |
+| n_updates          | 50           |
+| policy_entropy     | 0.18400377   |
+| policy_loss        | -0.016735196 |
+| serial_timesteps   | 6400         |
+| time_elapsed       | 1.09e+03     |
+| total_timesteps    | 32000        |
+| value_loss         | 0.55430657   |
+-------------------------------------
+Num timesteps: 35000
+Best mean reward: 1.47 - Last mean reward per episode: 0.24
+Mean score over last 106.00 episodes: 71.42
+Num timesteps: 40000
+Best mean reward: 1.47 - Last mean reward per episode: -0.12
+Mean score over last 123.00 episodes: 74.32
+Num timesteps: 45000
+Best mean reward: 1.47 - Last mean reward per episode: 0.50
+Mean score over last 130.00 episodes: 75.29
+Num timesteps: 50000
+Best mean reward: 1.47 - Last mean reward per episode: 2.00
+Mean score over last 136.00 episodes: 77.24
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 55000
+Best mean reward: 2.00 - Last mean reward per episode: 2.26
+Mean score over last 140.00 episodes: 78.62
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 60000
+Best mean reward: 2.26 - Last mean reward per episode: 2.17
+Mean score over last 144.00 episodes: 80.44
+-------------------------------------
+| approxkl           | 0.1035096    |
+| clipfrac           | 0.07265625   |
+| ep_len_mean        | 129          |
+| ep_reward_mean     | 2.25         |
+| explained_variance | 0.324        |
+| fps                | 27           |
+| n_updates          | 100          |
+| policy_entropy     | 0.13015875   |
+| policy_loss        | -0.015510129 |
+| serial_timesteps   | 12800        |
+| time_elapsed       | 2.25e+03     |
+| total_timesteps    | 64000        |
+| value_loss         | 0.38954952   |
+-------------------------------------
+Num timesteps: 65000
+Best mean reward: 2.26 - Last mean reward per episode: 2.06
+Mean score over last 149.00 episodes: 80.71
+Num timesteps: 70000
+Best mean reward: 2.26 - Last mean reward per episode: 3.19
+Mean score over last 151.00 episodes: 80.97
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 75000
+Best mean reward: 3.19 - Last mean reward per episode: 4.69
+Mean score over last 151.00 episodes: 80.97
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 80000
+Best mean reward: 4.69 - Last mean reward per episode: 5.14
+Mean score over last 151.00 episodes: 80.97
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 85000
+Best mean reward: 5.14 - Last mean reward per episode: 4.66
+Mean score over last 155.00 episodes: 81.21
+Num timesteps: 90000
+Best mean reward: 5.14 - Last mean reward per episode: 1.19
+Mean score over last 159.00 episodes: 80.94
+Num timesteps: 95000
+Best mean reward: 5.14 - Last mean reward per episode: 0.51
+Mean score over last 160.00 episodes: 81.03
+-------------------------------------
+| approxkl           | 0.07384283   |
+| clipfrac           | 0.07968749   |
+| ep_len_mean        | 131          |
+| ep_reward_mean     | 1.3          |
+| explained_variance | 0.891        |
+| fps                | 30           |
+| n_updates          | 150          |
+| policy_entropy     | 0.10912897   |
+| policy_loss        | -0.011476595 |
+| serial_timesteps   | 19200        |
+| time_elapsed       | 3.4e+03      |
+| total_timesteps    | 96000        |
+| value_loss         | 0.05256021   |
+-------------------------------------
+Num timesteps: 100000
+Best mean reward: 5.14 - Last mean reward per episode: 2.73
+Mean score over last 163.00 episodes: 81.53
+Num timesteps: 105000
+Best mean reward: 5.14 - Last mean reward per episode: 4.23
+Mean score over last 171.00 episodes: 82.39
+Num timesteps: 110000
+Best mean reward: 5.14 - Last mean reward per episode: 7.28
+Mean score over last 175.00 episodes: 83.42
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 115000
+Best mean reward: 7.28 - Last mean reward per episode: 8.29
+Mean score over last 182.00 episodes: 85.05
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 120000
+Best mean reward: 8.29 - Last mean reward per episode: 10.67
+Mean score over last 192.00 episodes: 85.76
+Saving new best model to Logs\ppo2\best_model
+Num timesteps: 125000
+Best mean reward: 10.67 - Last mean reward per episode: 6.79
+Mean score over last 205.00 episodes: 88.57
+-------------------------------------
+| approxkl           | 0.11330339   |
+| clipfrac           | 0.06171875   |
+| ep_len_mean        | 102          |
+| ep_reward_mean     | -0.0865      |
+| explained_variance | 0.548        |
+| fps                | 26           |
+| n_updates          | 200          |
+| policy_entropy     | 0.108302444  |
+| policy_loss        | -0.014738665 |
+| serial_timesteps   | 25600        |
+| time_elapsed       | 4.52e+03     |
+| total_timesteps    | 128000       |
+| value_loss         | 0.21710819   |
+-------------------------------------
+Num timesteps: 130000
+Best mean reward: 10.67 - Last mean reward per episode: 0.13
+Mean score over last 219.00 episodes: 91.12
+Num timesteps: 135000
+Best mean reward: 10.67 - Last mean reward per episode: 0.82
+Mean score over last 232.00 episodes: 93.05
+Num timesteps: 140000
+Best mean reward: 10.67 - Last mean reward per episode: 2.28
+Mean score over last 241.00 episodes: 93.26
+Num timesteps: 145000
+Best mean reward: 10.67 - Last mean reward per episode: 3.91
+Mean score over last 250.00 episodes: 95.35
+Num timesteps: 150000
+Best mean reward: 10.67 - Last mean reward per episode: 6.09
+Mean score over last 261.00 episodes: 96.78
+Num timesteps: 155000
+Best mean reward: 10.67 - Last mean reward per episode: 6.18
+Mean score over last 270.00 episodes: 97.93
+Num timesteps: 160000
+Best mean reward: 10.67 - Last mean reward per episode: 2.37
+Mean score over last 277.00 episodes: 97.85
+-------------------------------------
+| approxkl           | 0.061930355  |
+| clipfrac           | 0.06054688   |
+| ep_len_mean        | 123          |
+| ep_reward_mean     | 2.37         |
+| explained_variance | 0.0784       |
+| fps                | 24           |
+| n_updates          | 250          |
+| policy_entropy     | 0.10214326   |
+| policy_loss        | -0.009141714 |
+| serial_timesteps   | 32000        |
+| time_elapsed       | 5.74e+03     |
+| total_timesteps    | 160000       |
+| value_loss         | 0.5860954    |
+-------------------------------------
+Num timesteps: 165000
+Best mean reward: 10.67 - Last mean reward per episode: -0.57
+Mean score over last 285.00 episodes: 97.66
+Num timesteps: 170000
+Best mean reward: 10.67 - Last mean reward per episode: 1.98
+Mean score over last 294.00 episodes: 97.68
+Num timesteps: 175000
+Best mean reward: 10.67 - Last mean reward per episode: 3.48
+Mean score over last 302.00 episodes: 97.75
+Num timesteps: 180000
+Best mean reward: 10.67 - Last mean reward per episode: 3.71
+Mean score over last 313.00 episodes: 98.87
+Num timesteps: 185000
+Best mean reward: 10.67 - Last mean reward per episode: 2.76
+Mean score over last 331.00 episodes: 99.60
+Num timesteps: 190000
+Best mean reward: 10.67 - Last mean reward per episode: 1.48
+Mean score over last 341.00 episodes: 99.92
+------------------------------------
+| approxkl           | 0.06890862  |
+| clipfrac           | 0.07148437  |
+| ep_len_mean        | 88.7        |
+| ep_reward_mean     | 0.348       |
+| explained_variance | 0.645       |
+| fps                | 24          |
+| n_updates          | 300         |
+| policy_entropy     | 0.08551986  |
+| policy_loss        | -0.01117588 |
+| serial_timesteps   | 38400       |
+| time_elapsed       | 6.95e+03    |
+| total_timesteps    | 192000      |
+| value_loss         | 0.16710554  |
+------------------------------------
+Num timesteps: 195000
+Best mean reward: 10.67 - Last mean reward per episode: -1.08
+Mean score over last 353.00 episodes: 100.41
+Num timesteps: 200000
+Best mean reward: 10.67 - Last mean reward per episode: -0.45
+Mean score over last 362.00 episodes: 100.86
+Num timesteps: 205000
+Best mean reward: 10.67 - Last mean reward per episode: -0.11
+Mean score over last 389.00 episodes: 100.06
+Num timesteps: 210000
+Best mean reward: 10.67 - Last mean reward per episode: -0.18
+Mean score over last 410.00 episodes: 100.21
+Num timesteps: 215000
+Best mean reward: 10.67 - Last mean reward per episode: -0.17
+Mean score over last 420.00 episodes: 100.64
+Num timesteps: 220000
+Best mean reward: 10.67 - Last mean reward per episode: -1.44
+Mean score over last 436.00 episodes: 101.20
+-------------------------------------
+| approxkl           | 0.091256276  |
+| clipfrac           | 0.08125      |
+| ep_len_mean        | 64.6         |
+| ep_reward_mean     | -2.4         |
+| explained_variance | 0.288        |
+| fps                | 26           |
+| n_updates          | 350          |
+| policy_entropy     | 0.13974227   |
+| policy_loss        | -0.015278839 |
+| serial_timesteps   | 44800        |
+| time_elapsed       | 8.22e+03     |
+| total_timesteps    | 224000       |
+| value_loss         | 0.26333696   |
+-------------------------------------
+Num timesteps: 225000
+Best mean reward: 10.67 - Last mean reward per episode: -2.27
+Mean score over last 457.00 episodes: 101.17
+Num timesteps: 230000
+Best mean reward: 10.67 - Last mean reward per episode: -1.83
+Mean score over last 475.00 episodes: 101.05
+Num timesteps: 235000
+Best mean reward: 10.67 - Last mean reward per episode: -1.63
+Mean score over last 494.00 episodes: 100.87
+Num timesteps: 240000
+Best mean reward: 10.67 - Last mean reward per episode: -1.21
+Mean score over last 521.00 episodes: 100.08

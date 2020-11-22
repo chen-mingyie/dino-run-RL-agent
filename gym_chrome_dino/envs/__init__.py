@@ -5,3 +5,4 @@
 # Licensed under the MIT License - https://opensource.org/licenses/MIT
 
 from gym_chrome_dino.envs.chrome_dino_env import ChromeDinoEnv
+from gym_chrome_dino.envs.chrome_dino_env_2 import ChromeDinoEnv_Handcrafted

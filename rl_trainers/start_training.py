@@ -1,8 +1,8 @@
-from rl_trainers.trainers import dqn, ppo1, ppo2, trpo, a2c, acktr_notworking
+from rl_trainers.trainers import dqn_dinorunner, dqn_flappybird, ddqn_dinorunner, ppo_dinorunner, ppo_dinorunner_fullgame
 
-dqn(pretrained_model_name="dqn_dinorun.zip")
-# trpo()
-# ppo1()
-# ppo2() # Edmund will look into it
-# a2c() # Edmund will look into it
-# acktr_notworking()
+# Uncomment the relevant line to see the RL agent in action
+# dqn_dinorunner()
+# dqn_flappybird()
+# ddqn_dinorunner()
+# ppo_dinorunner()
+# ppo_dinorunner_fullgame()
