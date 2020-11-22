@@ -29,8 +29,10 @@ class ChromeDinoEnv(gym.Env):
         )
         self.action_space = spaces.Discrete(2)
         self.gametime_reward = 0.1
-        self.gameover_penalty = -1
-        self.current_frame = self.observation_space.low
+        self.gameover_penalty = -2 #-1
+        self.suicide_penalty = -10
+        self.redundant_jump_penalty = -10
+        self.action_penalty = -0.01
         self._action_set = [0, 1, 2]
     
     def _observe(self):
@@ -43,18 +45,27 @@ class ChromeDinoEnv(gym.Env):
         return self.current_frame
     
     def step(self, action):
+        reward = 0
         if action == 1:
             self.game.press_up()
+            reward += self.action_penalty
         if action == 2:
             self.game.press_down()
+            reward += self.action_penalty
         if action == 3:
             self.game.press_space()
+            reward += self.action_penalty
         observation = self._observe()
-        reward = self.gametime_reward
+        reward += self.gametime_reward
         done = False
         info = {}
         if self.game.is_crashed():
-            reward = self.gameover_penalty
+            obstacle = self.game.obstacle()
+            rex = self.game.rex()
+            speed = self.game.get_speed()
+
+            if not rex['jumping']: reward += self.suicide_penalty
+            reward += self.gameover_penalty
             done = True
         return observation, reward, done, info
     

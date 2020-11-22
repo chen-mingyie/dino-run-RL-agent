@@ -9,6 +9,7 @@ from gym.envs.registration import register
 register(
     id='ChromeDino-v0', 
     entry_point='gym_chrome_dino.envs:ChromeDinoEnv', 
+    # kwargs={'render': True, 'accelerate': True, 'autoscale': False}
     kwargs={'render': True, 'accelerate': False, 'autoscale': False}
 )
 
@@ -16,4 +17,16 @@ register(
     id='ChromeDinoNoBrowser-v0', 
     entry_point='gym_chrome_dino.envs:ChromeDinoEnv', 
     kwargs={'render': False, 'accelerate': False, 'autoscale': False}
+)
+
+register(
+    id='ChromeDinoHandrafted-v0',
+    entry_point='gym_chrome_dino.envs:ChromeDinoEnv_Handcrafted',
+    kwargs={'render': True, 'accelerate': False, 'autoscale': False}
+)
+
+register(
+    id='ChromeDinoHandrafted_accl-v0',
+    entry_point='gym_chrome_dino.envs:ChromeDinoEnv_Handcrafted',
+    kwargs={'render': True, 'accelerate': True, 'autoscale': False}
 )
