@@ -1,0 +1,4 @@
+obstacle height: 35, 50
+obstacle width: 25, 17
+Game width: 600
+Game speed: 6 - 13
