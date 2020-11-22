@@ -43,10 +43,11 @@ class TimerEnv(gym.Wrapper):
         info['timedelta'] = self.timer.tick()
         return obs, reward, done, info
 
-def make_dino(env, timer=True, frame_stack=True):
+
+def make_dino(env, timer=True, frame_stack=True, num_stacks=8):
     env = WarpFrame(env, 160, 80)
     if timer:
         env = TimerEnv(env)
     if frame_stack:
-        env = FrameStack(env, 8)
+        env = FrameStack(env, num_stacks)
     return env

@@ -19,7 +19,7 @@ def train_dqn(saved_model_name: str, env_id: str = "ChromeDino-v0", env_suit_din
     env = gym.make(env_id)
 
     if env_suit_dino:
-        env = make_dino(env, timer=True, frame_stack=True)
+        env = make_dino(env, timer=True, frame_stack=True, num_stacks=4)
 
     env = Monitor(env, logpath)
     env.reset()
@@ -47,7 +47,7 @@ def transfer_learning_dqn(original_model_name: str, saved_model_name: str, env_i
 
     # Create env
     env = gym.make(env_id)
-    env = make_dino(env, timer=True, frame_stack=True)
+    env = make_dino(env, timer=True, frame_stack=True, num_stacks=4)
 
     env = Monitor(env, logpath)
 
@@ -75,7 +75,7 @@ def render_model(path: str = None, env_suit_dino: bool = False):
     env = Monitor(env, logpath)
 
     if env_suit_dino:
-        env = make_dino(env, timer=True, frame_stack=True)
+        env = make_dino(env, timer=True, frame_stack=True, num_stacks=4)
 
     if path is not None:
         model = DQN.load(path)
@@ -105,32 +105,32 @@ def render_model(path: str = None, env_suit_dino: bool = False):
 
 
 if __name__ == '__main__':
-    # Training models with random weights and RGB input
-    train_dqn(saved_model_name="dqn_wo_mod_flappybird.zip", env_id="FlappyBird-v0", env_suit_dino=False)
-    # Training models with random weights and grayscale input
-    train_dqn(saved_model_name="dqn_w_mod_flappybird.zip", env_id="FlappyBird-v0", env_suit_dino=True)
+    # # Training models with random weights and RGB input
+    # train_dqn(saved_model_name="dqn_wo_mod_flappybird.zip", env_id="FlappyBird-v0", env_suit_dino=False)
+    # # Training models with random weights and grayscale input
+    # train_dqn(saved_model_name="dqn_w_mod_flappybird.zip", env_id="FlappyBird-v0", env_suit_dino=True)
+    #
+    # # Training models with pretrained weights
+    # transfer_learning_dqn("dqn_dinorun.zip", "dqn_tl_flappybird.zip", env_id="FlappyBird-v0")
 
-    # Training models with pretrained weights
-    transfer_learning_dqn("dqn_dinorun.zip", "dqn_tl_flappybird.zip", env_id="FlappyBird-v0")
-
-    # View untrained model with raw RGB inputs
-    render_model(path=None,
-                 env_suit_dino=False)
-    # View untrained model with grayscale inputs
-    render_model(path=None,
-                 env_suit_dino=True)
-    # View pretrained model with grayscale inputs
-    # TODO: For the zipfiles below, please download the files using links from
-    # TODO: rl_trainers/Logs/dqn_flappybird/Flappybrid trained using dqn model.txt
-    # TODO: and leave it in rl_trainers/Logs/dqn_flappybird
+    # # View untrained model with raw RGB inputs
+    # render_model(path=None,
+    #              env_suit_dino=False)
+    # # View untrained model with grayscale inputs
+    # render_model(path=None,
+    #              env_suit_dino=True)
+    # # View pretrained model with grayscale inputs
+    # # TODO: For the zipfiles below, please download the files using links from
+    # # TODO: rl_trainers/Logs/dqn_flappybird/Flappybrid trained using dqn model.txt
+    # # TODO: and leave it in rl_trainers/Logs/dqn_flappybird
     render_model(path="Logs/dqn_flappybird/dqn_dinorun.zip",
                  env_suit_dino=True)
-    # View trained model with raw RGB inputs
-    render_model(path="Logs/dqn_flappybird/dqn_wo_mod_flappybird.zip",
-                 env_suit_dino=False)
-    # View trained model with grayscale inputs
-    render_model(path="Logs/dqn_flappybird/dqn_w_mod_flappybird.zip",
-                 env_suit_dino=True)
-    # View pretrained trained model with grayscale inputs
-    render_model(path="Logs/dqn_flappybird/dqn_tl_flappybird.zip",
-                 env_suit_dino=True)
+    # # View trained model with raw RGB inputs
+    # render_model(path="Logs/dqn_flappybird/dqn_wo_mod_flappybird.zip",
+    #              env_suit_dino=False)
+    # # View trained model with grayscale inputs
+    # render_model(path="Logs/dqn_flappybird/dqn_w_mod_flappybird.zip",
+    #              env_suit_dino=True)
+    # # View pretrained trained model with grayscale inputs
+    # render_model(path="Logs/dqn_flappybird/dqn_tl_flappybird.zip",
+    #              env_suit_dino=True)
