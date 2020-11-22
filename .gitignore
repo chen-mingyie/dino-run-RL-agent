@@ -10,4 +10,4 @@ README.md
 .idea
 rl_trainers/debug.log
 Logs/
-Logs/ppo2-2
+Logs/ppo2
