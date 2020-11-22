@@ -65,8 +65,8 @@ def ppo_dinorunner_fullgame():
     model = PPO2.load(os.path.join(logpath, 'best_model.zip'), env=env)
     model.learn(total_timesteps=int(1e6), log_interval=50) # Train the agent
 
-def ppo2(pretrained_model_name: str = "", gametype = "ppo2"):
-    logpath = os.path.join(LOG_DIR, gametype)
+def ppo2(pretrained_model_name: str = ""):
+    logpath = os.path.join(LOG_DIR, 'ppo2')
 
     # Create Env
     # env = make_dino_vec_env(ENV_ID, logpath, nbr_env=5)
