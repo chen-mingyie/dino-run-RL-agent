@@ -1,14 +1,10 @@
 import gym_ple
-import datetime
 
 import gym
 import os
-import gym_chrome_dino
 from gym_chrome_dino.utils.wrappers import make_dino
-from gym import wrappers
 from stable_baselines.bench import Monitor
-from stable_baselines.common import make_vec_env, env_checker
-from stable_baselines import HER, PPO2, DQN, ACKTR, A2C
+from stable_baselines import DQN
 from rl_trainers.utils import save_model_callback
 from rl_trainers.utils import evaluate_model
 
@@ -17,7 +13,7 @@ LOG_DIR = "Logs"
 
 
 def train_dqn(saved_model_name: str, env_id: str = "ChromeDino-v0", env_suit_dino: bool = False):
-    logpath = os.path.join(LOG_DIR, 'dqn')
+    logpath = os.path.join(LOG_DIR, 'dqn_flappybird')
 
     # Create env
     env = gym.make(env_id)
@@ -47,7 +43,7 @@ def train_dqn(saved_model_name: str, env_id: str = "ChromeDino-v0", env_suit_din
 
 
 def transfer_learning_dqn(original_model_name: str, saved_model_name: str, env_id: str = "ChromeDino-v0"):
-    logpath = os.path.join(LOG_DIR, 'dqn')
+    logpath = os.path.join(LOG_DIR, 'dqn_flappybird')
 
     # Create env
     env = gym.make(env_id)
@@ -72,7 +68,7 @@ def transfer_learning_dqn(original_model_name: str, saved_model_name: str, env_i
 
 
 def render_model(path: str = None, env_suit_dino: bool = False):
-    logpath = os.path.join(LOG_DIR, 'dqn')
+    logpath = os.path.join(LOG_DIR, 'dqn_flappybird')
 
     env = gym.make("FlappyBird-v0")
 
@@ -90,7 +86,6 @@ def render_model(path: str = None, env_suit_dino: bool = False):
                     learning_rate=1e-3,
                     exploration_fraction=0.1,
                     prioritized_replay=True, verbose=1)
-
 
     episode_count = 100
     reward = 0
@@ -125,14 +120,17 @@ if __name__ == '__main__':
     render_model(path=None,
                  env_suit_dino=True)
     # View pretrained model with grayscale inputs
-    render_model(path="Logs/dqn/dqn_dinorun.zip",
+    # TODO: For the zipfiles below, please download the files using links from
+    # TODO: rl_trainers/Logs/dqn_flappybird/Flappybrid trained using dqn model.txt
+    # TODO: and leave it in rl_trainers/Logs/dqn_flappybird
+    render_model(path="Logs/dqn_flappybird/dqn_dinorun.zip",
                  env_suit_dino=True)
     # View trained model with raw RGB inputs
-    render_model(path="Logs/dqn/dqn_wo_mod_flappybird.zip",
+    render_model(path="Logs/dqn_flappybird/dqn_wo_mod_flappybird.zip",
                  env_suit_dino=False)
     # View trained model with grayscale inputs
-    render_model(path="Logs/dqn/dqn_w_mod_flappybird.zip",
+    render_model(path="Logs/dqn_flappybird/dqn_w_mod_flappybird.zip",
                  env_suit_dino=True)
     # View pretrained trained model with grayscale inputs
-    render_model(path="Logs/dqn/dqn_tl_flappybird.zip",
+    render_model(path="Logs/dqn_flappybird/dqn_tl_flappybird.zip",
                  env_suit_dino=True)
